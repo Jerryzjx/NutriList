@@ -28,6 +28,13 @@
 		C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74522B4B0F62004E0A2C /* SignInApple.swift */; };
 		C42C74552B4B0FA2004E0A2C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74542B4B0FA2004E0A2C /* SignInView.swift */; };
 		C42C74572B4B0FB3004E0A2C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */; };
+		C42C74592B4B124F004E0A2C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74582B4B124F004E0A2C /* SignInViewModel.swift */; };
+		C42C745B2B4B129A004E0A2C /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C745A2B4B129A004E0A2C /* ToDoModel.swift */; };
+		C42C745D2B4B12BF004E0A2C /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C745C2B4B12BF004E0A2C /* ToDoViewModel.swift */; };
+		C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C745E2B4B12D8004E0A2C /* ToDoView.swift */; };
+		C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */; };
+		C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */; };
+		C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74652B4B133A004E0A2C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,15 @@
 		C42C74522B4B0F62004E0A2C /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
 		C42C74542B4B0FA2004E0A2C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		C42C74582B4B124F004E0A2C /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		C42C745A2B4B129A004E0A2C /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		C42C745C2B4B12BF004E0A2C /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
+		C42C745E2B4B12D8004E0A2C /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
+		C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemView.swift; sourceTree = "<group>"; };
+		C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoView.swift; sourceTree = "<group>"; };
+		C42C74652B4B133A004E0A2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C42C74672B4B142A004E0A2C /* NutriList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutriList.entitlements; sourceTree = "<group>"; };
+		C42C746A2B4B2900004E0A2C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 		C42C73FD2B4B077C004E0A2C = {
 			isa = PBXGroup;
 			children = (
+				C42C746A2B4B2900004E0A2C /* Config.xcconfig */,
 				C42C74082B4B077C004E0A2C /* NutriList */,
 				C42C74192B4B077F004E0A2C /* NutriListTests */,
 				C42C74232B4B077F004E0A2C /* NutriListUITests */,
@@ -122,6 +139,7 @@
 		C42C74082B4B077C004E0A2C /* NutriList */ = {
 			isa = PBXGroup;
 			children = (
+				C42C74672B4B142A004E0A2C /* NutriList.entitlements */,
 				C42C74462B4B0E8D004E0A2C /* Components */,
 				C42C74452B4B0D7D004E0A2C /* Font */,
 				C42C74442B4B0CD9004E0A2C /* Supabase */,
@@ -166,6 +184,10 @@
 				C42C740B2B4B077C004E0A2C /* ContentView.swift */,
 				C42C74542B4B0FA2004E0A2C /* SignInView.swift */,
 				C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */,
+				C42C745E2B4B12D8004E0A2C /* ToDoView.swift */,
+				C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */,
+				C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */,
+				C42C74652B4B133A004E0A2C /* HomeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +195,8 @@
 		C42C74422B4B0CC4004E0A2C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C42C74582B4B124F004E0A2C /* SignInViewModel.swift */,
+				C42C745C2B4B12BF004E0A2C /* ToDoViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -180,6 +204,7 @@
 		C42C74432B4B0CD1004E0A2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C42C745A2B4B129A004E0A2C /* ToDoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -364,10 +389,17 @@
 				C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */,
 				C42C74512B4B0F3E004E0A2C /* AuthManager.swift in Sources */,
 				C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */,
+				C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */,
+				C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */,
+				C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */,
 				C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */,
+				C42C745B2B4B129A004E0A2C /* ToDoModel.swift in Sources */,
+				C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */,
 				C42C74482B4B0EAF004E0A2C /* AppTextField.swift in Sources */,
 				C42C744A2B4B0ED4004E0A2C /* AppSecureField.swift in Sources */,
 				C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */,
+				C42C745D2B4B12BF004E0A2C /* ToDoViewModel.swift in Sources */,
+				C42C74592B4B124F004E0A2C /* SignInViewModel.swift in Sources */,
 				C42C744C2B4B0EFE004E0A2C /* AppButton.swift in Sources */,
 				C42C74572B4B0FB3004E0A2C /* RegistrationView.swift in Sources */,
 			);
@@ -530,6 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NutriList/NutriList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NutriList/Preview Content\"";
@@ -559,6 +592,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NutriList/NutriList.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NutriList/Preview Content\"";
