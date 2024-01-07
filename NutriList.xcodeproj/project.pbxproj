@@ -14,6 +14,20 @@
 		C42C741B2B4B077F004E0A2C /* NutriListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C741A2B4B077F004E0A2C /* NutriListTests.swift */; };
 		C42C74252B4B077F004E0A2C /* NutriListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74242B4B077F004E0A2C /* NutriListUITests.swift */; };
 		C42C74272B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */; };
+		C42C74352B4B0B5D004E0A2C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = C42C74342B4B0B5D004E0A2C /* Auth */; };
+		C42C74372B4B0B5D004E0A2C /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = C42C74362B4B0B5D004E0A2C /* Functions */; };
+		C42C74392B4B0B5D004E0A2C /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = C42C74382B4B0B5D004E0A2C /* PostgREST */; };
+		C42C743B2B4B0B5D004E0A2C /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = C42C743A2B4B0B5D004E0A2C /* Realtime */; };
+		C42C743D2B4B0B5D004E0A2C /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = C42C743C2B4B0B5D004E0A2C /* Storage */; };
+		C42C743F2B4B0B5D004E0A2C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = C42C743E2B4B0B5D004E0A2C /* Supabase */; };
+		C42C74482B4B0EAF004E0A2C /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74472B4B0EAF004E0A2C /* AppTextField.swift */; };
+		C42C744A2B4B0ED4004E0A2C /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */; };
+		C42C744C2B4B0EFE004E0A2C /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C744B2B4B0EFE004E0A2C /* AppButton.swift */; };
+		C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C744D2B4B0F14004E0A2C /* DatabaseManager.swift */; };
+		C42C74512B4B0F3E004E0A2C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74502B4B0F3E004E0A2C /* AuthManager.swift */; };
+		C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74522B4B0F62004E0A2C /* SignInApple.swift */; };
+		C42C74552B4B0FA2004E0A2C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74542B4B0FA2004E0A2C /* SignInView.swift */; };
+		C42C74572B4B0FB3004E0A2C /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +58,14 @@
 		C42C74202B4B077F004E0A2C /* NutriListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74242B4B077F004E0A2C /* NutriListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITests.swift; sourceTree = "<group>"; };
 		C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C42C74472B4B0EAF004E0A2C /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
+		C42C744B2B4B0EFE004E0A2C /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		C42C744D2B4B0F14004E0A2C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		C42C74502B4B0F3E004E0A2C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		C42C74522B4B0F62004E0A2C /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
+		C42C74542B4B0FA2004E0A2C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +73,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42C74392B4B0B5D004E0A2C /* PostgREST in Frameworks */,
+				C42C74372B4B0B5D004E0A2C /* Functions in Frameworks */,
+				C42C743F2B4B0B5D004E0A2C /* Supabase in Frameworks */,
+				C42C74352B4B0B5D004E0A2C /* Auth in Frameworks */,
+				C42C743D2B4B0B5D004E0A2C /* Storage in Frameworks */,
+				C42C743B2B4B0B5D004E0A2C /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +122,13 @@
 		C42C74082B4B077C004E0A2C /* NutriList */ = {
 			isa = PBXGroup;
 			children = (
+				C42C74462B4B0E8D004E0A2C /* Components */,
+				C42C74452B4B0D7D004E0A2C /* Font */,
+				C42C74442B4B0CD9004E0A2C /* Supabase */,
+				C42C74432B4B0CD1004E0A2C /* Models */,
+				C42C74422B4B0CC4004E0A2C /* ViewModel */,
+				C42C74412B4B0C8D004E0A2C /* View */,
 				C42C74092B4B077C004E0A2C /* NutriListApp.swift */,
-				C42C740B2B4B077C004E0A2C /* ContentView.swift */,
 				C42C740D2B4B077E004E0A2C /* Assets.xcassets */,
 				C42C740F2B4B077E004E0A2C /* Preview Content */,
 			);
@@ -127,6 +160,65 @@
 			path = NutriListUITests;
 			sourceTree = "<group>";
 		};
+		C42C74412B4B0C8D004E0A2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C42C740B2B4B077C004E0A2C /* ContentView.swift */,
+				C42C74542B4B0FA2004E0A2C /* SignInView.swift */,
+				C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C42C74422B4B0CC4004E0A2C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C42C74432B4B0CD1004E0A2C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C42C74442B4B0CD9004E0A2C /* Supabase */ = {
+			isa = PBXGroup;
+			children = (
+				C42C744F2B4B0F2C004E0A2C /* Auth */,
+				C42C744D2B4B0F14004E0A2C /* DatabaseManager.swift */,
+			);
+			path = Supabase;
+			sourceTree = "<group>";
+		};
+		C42C74452B4B0D7D004E0A2C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		C42C74462B4B0E8D004E0A2C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C42C74472B4B0EAF004E0A2C /* AppTextField.swift */,
+				C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */,
+				C42C744B2B4B0EFE004E0A2C /* AppButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C42C744F2B4B0F2C004E0A2C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C42C74502B4B0F3E004E0A2C /* AuthManager.swift */,
+				C42C74522B4B0F62004E0A2C /* SignInApple.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +235,14 @@
 			dependencies = (
 			);
 			name = NutriList;
+			packageProductDependencies = (
+				C42C74342B4B0B5D004E0A2C /* Auth */,
+				C42C74362B4B0B5D004E0A2C /* Functions */,
+				C42C74382B4B0B5D004E0A2C /* PostgREST */,
+				C42C743A2B4B0B5D004E0A2C /* Realtime */,
+				C42C743C2B4B0B5D004E0A2C /* Storage */,
+				C42C743E2B4B0B5D004E0A2C /* Supabase */,
+			);
 			productName = NutriList;
 			productReference = C42C74062B4B077C004E0A2C /* NutriList.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +315,9 @@
 				Base,
 			);
 			mainGroup = C42C73FD2B4B077C004E0A2C;
+			packageReferences = (
+				C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			productRefGroup = C42C74072B4B077C004E0A2C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42C74552B4B0FA2004E0A2C /* SignInView.swift in Sources */,
 				C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */,
+				C42C74512B4B0F3E004E0A2C /* AuthManager.swift in Sources */,
 				C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */,
+				C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */,
+				C42C74482B4B0EAF004E0A2C /* AppTextField.swift in Sources */,
+				C42C744A2B4B0ED4004E0A2C /* AppSecureField.swift in Sources */,
+				C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */,
+				C42C744C2B4B0EFE004E0A2C /* AppButton.swift in Sources */,
+				C42C74572B4B0FB3004E0A2C /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +699,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C42C74342B4B0B5D004E0A2C /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		C42C74362B4B0B5D004E0A2C /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Functions;
+		};
+		C42C74382B4B0B5D004E0A2C /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		C42C743A2B4B0B5D004E0A2C /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		C42C743C2B4B0B5D004E0A2C /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+		C42C743E2B4B0B5D004E0A2C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C42C74332B4B0B5D004E0A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C42C73FE2B4B077C004E0A2C /* Project object */;
 }
