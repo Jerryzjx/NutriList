@@ -20,6 +20,7 @@ class ToDoViewModel: ObservableObject {
         }
         
         let toDo = ToDoPayload(text: text, userUid: uid, category: category)
+        print("Creating todo item")
         try await DatabaseManager.shared.createToDOItem(item: toDo)
     }
     

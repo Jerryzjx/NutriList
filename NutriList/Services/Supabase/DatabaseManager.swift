@@ -14,13 +14,13 @@ class DatabaseManager {
     
     private init(){}
     
-    let client = SupabaseClient(supabaseURL: "URL", supabaseKey: "Key")
+   
     
     func createToDOItem(item: ToDoPayload) async throws {
         let response = try await client.database.from("todos").insert(item).execute()
         print(response)
         print(response.status)
-        //print(response.underlyingResponse.data)
+        print(response.data)
     }
     
     func fetchToDoItems(for uid: String) async throws -> [ToDo] {

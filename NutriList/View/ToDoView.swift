@@ -29,15 +29,27 @@ struct ToDoView: View {
             .background(Color(red: 39/255, green: 40/255, blue: 39/255))
             .navigationTitle("Grocery List")
             .toolbar {
-                NavigationLink {
-                    CreateToDoView(appUser: appUser)
-                        .environmentObject(viewModel)
-                } label: {
-                    Image(systemName: "plus.circle.fill")
-                        .resizable()
-                        .frame(width: 32, height: 32)
-                        .padding(.all, 2)
-                        .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
+                
+                HStack {
+                    NavigationLink {
+                        SignOutView(appUser: $appUser)
+                    } label: {
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                            .padding(.all, 2)
+                            .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
+                }
+                    NavigationLink {
+                        CreateToDoView(appUser: appUser)
+                            .environmentObject(viewModel)
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                            .padding(.all, 2)
+                            .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
+                }
                 }
                 
             }

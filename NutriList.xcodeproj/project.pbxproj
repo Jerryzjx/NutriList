@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4149BD22B4BB0B500182109 /* SignOutView.swift */; };
 		C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74092B4B077C004E0A2C /* NutriListApp.swift */; };
 		C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C740B2B4B077C004E0A2C /* ContentView.swift */; };
 		C42C740E2B4B077E004E0A2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42C740D2B4B077E004E0A2C /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */; };
 		C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */; };
 		C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74652B4B133A004E0A2C /* HomeView.swift */; };
+		C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4149BD22B4BB0B500182109 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
 		C42C74062B4B077C004E0A2C /* NutriList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74092B4B077C004E0A2C /* NutriListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListApp.swift; sourceTree = "<group>"; };
 		C42C740B2B4B077C004E0A2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,9 +68,9 @@
 		C42C74202B4B077F004E0A2C /* NutriListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74242B4B077F004E0A2C /* NutriListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITests.swift; sourceTree = "<group>"; };
 		C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C42C74472B4B0EAF004E0A2C /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
-		C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
-		C42C744B2B4B0EFE004E0A2C /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		C42C74472B4B0EAF004E0A2C /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTextField.swift; path = ../Components/AppTextField.swift; sourceTree = "<group>"; };
+		C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSecureField.swift; path = ../Components/AppSecureField.swift; sourceTree = "<group>"; };
+		C42C744B2B4B0EFE004E0A2C /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppButton.swift; path = ../Components/AppButton.swift; sourceTree = "<group>"; };
 		C42C744D2B4B0F14004E0A2C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C42C74502B4B0F3E004E0A2C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		C42C74522B4B0F62004E0A2C /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
@@ -82,6 +85,7 @@
 		C42C74652B4B133A004E0A2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C42C74672B4B142A004E0A2C /* NutriList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutriList.entitlements; sourceTree = "<group>"; };
 		C42C746A2B4B2900004E0A2C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CohereAPIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +143,9 @@
 		C42C74082B4B077C004E0A2C /* NutriList */ = {
 			isa = PBXGroup;
 			children = (
+				C4A9CEEE2B4C8F4A00047CDC /* Services */,
 				C42C74672B4B142A004E0A2C /* NutriList.entitlements */,
-				C42C74462B4B0E8D004E0A2C /* Components */,
 				C42C74452B4B0D7D004E0A2C /* Font */,
-				C42C74442B4B0CD9004E0A2C /* Supabase */,
 				C42C74432B4B0CD1004E0A2C /* Models */,
 				C42C74422B4B0CC4004E0A2C /* ViewModel */,
 				C42C74412B4B0C8D004E0A2C /* View */,
@@ -181,6 +184,7 @@
 		C42C74412B4B0C8D004E0A2C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4A9CEF02B4C8FF800047CDC /* UIComponents */,
 				C42C740B2B4B077C004E0A2C /* ContentView.swift */,
 				C42C74542B4B0FA2004E0A2C /* SignInView.swift */,
 				C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */,
@@ -188,6 +192,7 @@
 				C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */,
 				C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */,
 				C42C74652B4B133A004E0A2C /* HomeView.swift */,
+				C4149BD22B4BB0B500182109 /* SignOutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,16 +230,6 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		C42C74462B4B0E8D004E0A2C /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				C42C74472B4B0EAF004E0A2C /* AppTextField.swift */,
-				C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */,
-				C42C744B2B4B0EFE004E0A2C /* AppButton.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		C42C744F2B4B0F2C004E0A2C /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +237,25 @@
 				C42C74522B4B0F62004E0A2C /* SignInApple.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		C4A9CEEE2B4C8F4A00047CDC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */,
+				C42C74442B4B0CD9004E0A2C /* Supabase */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C4A9CEF02B4C8FF800047CDC /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C42C74472B4B0EAF004E0A2C /* AppTextField.swift */,
+				C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */,
+				C42C744B2B4B0EFE004E0A2C /* AppButton.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,11 +407,13 @@
 				C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */,
 				C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */,
 				C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */,
+				C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */,
 				C42C745B2B4B129A004E0A2C /* ToDoModel.swift in Sources */,
 				C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */,
 				C42C74482B4B0EAF004E0A2C /* AppTextField.swift in Sources */,
 				C42C744A2B4B0ED4004E0A2C /* AppSecureField.swift in Sources */,
 				C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */,
+				C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */,
 				C42C745D2B4B12BF004E0A2C /* ToDoViewModel.swift in Sources */,
 				C42C74592B4B124F004E0A2C /* SignInViewModel.swift in Sources */,
 				C42C744C2B4B0EFE004E0A2C /* AppButton.swift in Sources */,

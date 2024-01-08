@@ -27,10 +27,10 @@ struct CreateToDoView: View {
                     Task {
                         do {
                             try await viewModel.createItem(text: text, uid: appUser.uid,
-                            category: "Others")
+                            category: text)
                             dismiss()
                         } catch {
-                            print("error")
+                            print("Error creating ToDo item: \(error)")
                         }
                     }
                 }

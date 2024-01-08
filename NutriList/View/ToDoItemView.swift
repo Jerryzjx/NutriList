@@ -31,7 +31,7 @@ struct ToDoItemView: View {
                     do {
                         try await viewModel.deleteItem(todo: todo)
                     } catch {
-                        print("errir deleting item")
+                        print("error deleting item")
                         print(error)
                     }
                 }
@@ -43,6 +43,12 @@ struct ToDoItemView: View {
                 
                 HStack {
                     Text(todo.text)
+                        .foregroundColor(Color(red: 39/255, green: 40/255, blue: 39/255))
+                        .padding()
+                    
+                    Spacer()
+                    
+                    Text(todo.category)
                         .foregroundColor(Color(red: 39/255, green: 40/255, blue: 39/255))
                         .padding()
                     
