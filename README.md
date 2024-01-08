@@ -1,7 +1,7 @@
 <h1 align="center"> NutriList </h1> <br>
 <p align="center">
   <a href="https://jerryzjx.com">
-    <img alt="NutriList" title="NutriList" src="https://github.com/Jerryzjx/NutriList/blob/main/External/logo.png" width="450"> 
+    <img alt="NutriList" title="NutriList" src="https://github.com/Jerryzjx/NutriList/blob/main/External/logo.png" width="350" height="350"> 
   </a>
 </p>
 
