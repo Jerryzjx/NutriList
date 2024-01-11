@@ -14,13 +14,13 @@ class DatabaseManager {
     
     private init(){}
     
-   
+    let client = SupabaseClient(supabaseURL: "URL", supabaseKey: "KEY")
     
     func createToDOItem(item: ToDoPayload) async throws {
         let response = try await client.database.from("todos").insert(item).execute()
-        print(response)
-        print(response.status)
-        print(response.data)
+       // print(response)
+       // print(response.status)
+       // print(response.data)
     }
     
     func fetchToDoItems(for uid: String) async throws -> [ToDo] {
@@ -29,14 +29,14 @@ class DatabaseManager {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let todos = try decoder.decode([ToDo].self, from: data)
-        print(todos)
+       // print(todos)
         return todos
     }
     
     func deleteToDoItem(id: Int) async throws {
         let response = try await client.database.from("todos").delete().eq("id", value: id).execute()
-        print(response)
-        print(response.status)
-        print(String(data: response.data, encoding: .utf8))
+       // print(response)
+       // print(response.status)
+       // print(String(data: response.data, encoding: .utf8))
     }
 }

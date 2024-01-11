@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
+import CoreML
+
 
 struct CreateToDoView: View {
     @EnvironmentObject var viewModel: ToDoViewModel
     @Environment(\.dismiss) var dismiss
     
+    @State private var predictionResult: String = ""
     @State var text = " "
     
     @State var appUser: AppUser
+    
+    // Initialize the text classifier
+    let textClassifier: GroceryItemClassifier_1? = {
+        do {
+            let configuration = MLModelConfiguration()
+            return try GroceryItemClassifier_1(configuration: configuration)
+        } catch {
+            print("Error initializing the model: \(error)")
+            return nil
+        }
+    }()
+    
     
     var body: some View {
         VStack (spacing: 30) {
@@ -24,15 +39,25 @@ struct CreateToDoView: View {
             
             Button {
                 if text.count > 2 {
-                    Task {
-                        do {
-                            try await viewModel.createItem(text: text, uid: appUser.uid,
-                            category: text)
-                            dismiss()
-                        } catch {
-                            print("Error creating ToDo item: \(error)")
-                        }
-                    }
+                    classifyText(text)
+                    /* fetchPrediction(input: text) { result in
+                     DispatchQueue.main.async {
+                     switch result {
+                     case .success(let prediction):
+                     self.predictionResult = prediction
+                     Task {
+                     do {
+                     try await viewModel.createItem(text: text, uid: appUser.uid, category: predictionResult)
+                     dismiss()
+                     } catch {
+                     print("Error creating ToDo item: \(error)")
+                     }
+                     }
+                     case .failure(let error):
+                     self.predictionResult = "Error: \(error)"
+                     }
+                     }
+                     }*/
                 }
             } label: {
                 Text("Create")
@@ -49,7 +74,45 @@ struct CreateToDoView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.all)
     }
+    private func classifyText(_ inputText: String) {
+        let capitalizedText = inputText.capitalized
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            let result = predictCategory(for: capitalizedText)
+            DispatchQueue.main.async {
+                handlePredictionResult(result: result)
+            }
+        }
+    }
+    
+    private func predictCategory(for inputText: String) -> String {
+        guard let textClassifier = textClassifier else {
+            return "Model not loaded"
+        }
+        
+        do {
+            let prediction = try textClassifier.prediction(text: inputText)
+            return prediction.label
+        } catch {
+            print("Error during prediction: \(error)")
+            return "Prediction failed"
+        }
+    }
+    
+    private func handlePredictionResult(result: String) {
+        self.predictionResult = result
+        Task {
+            do {
+                try await viewModel.createItem(text: text, uid: appUser.uid, category: predictionResult)
+                dismiss()
+            } catch {
+                print("Error creating ToDo item: \(error)")
+            }
+        }
+    }
 }
+
+
 
 #Preview {
     CreateToDoView( appUser: .init(uid: "", email: ""))

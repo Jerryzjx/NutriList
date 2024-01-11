@@ -16,19 +16,25 @@ enum RequestError: Error {
     case predictionError(String)
 }
 
+struct ClassificationResponse: Codable {
+    let classifications: [Prediction]
+}
+
+struct Prediction: Codable {
+    let prediction: String
+}
+
 func fetchPrediction(input: String, completion: @escaping (Result<String, RequestError>) -> Void) {
     let headers = [
       "accept": "application/json",
       "content-type": "application/json",
-      "authorization": ""
+      "authorization": "Bearer 83I7hPYNMeTlob2CGyKt63bMGzEwq8SiHShTMW0C"
     ]
     
     let parameters = [
         "truncate": "END",
         "inputs": [input],
         "examples": [
-            ["text": "Baby Formula", "label": "Baby Products"],
-            ["text": "Diapers", "label": "Baby Products"],
             ["text": "White Bread", "label": "Bakery and Bread"],
             ["text": "Croissants", "label": "Bakery and Bread"],
             ["text": "Ground Coffee", "label": "Beverages"],
@@ -53,12 +59,8 @@ func fetchPrediction(input: String, completion: @escaping (Result<String, Reques
             ["text": "All-purpose Flour", "label": "Pantry Staples"],
             ["text": "Dog Food", "label": "Pet Supplies"],
             ["text": "Cat Food", "label": "Pet Supplies"],
-            ["text": "Christmas Decorations", "label": "Seasonal and Occasional"],
-            ["text": "Halloween Candy", "label": "Seasonal and Occasional"],
             ["text": "Potato Chips", "label": "Snacks and Sweets"],
-            ["text": "Oreo Cookies", "label": "Snacks and Sweets"],
-            ["text": "Organic Apples", "label": "Specialty Items"],
-            ["text": "Gluten-Free Bread", "label": "Specialty Items"]
+            ["text": "Oreo Cookies", "label": "Snacks and Sweets"]
         ]
     ] as [String : Any]
     
@@ -81,41 +83,27 @@ func fetchPrediction(input: String, completion: @escaping (Result<String, Reques
     
     let session = URLSession.shared
     let dataTask = session.dataTask(with: request) { data, response, error in
-        if let error = error {
-            print("Error: \(error.localizedDescription)")
-            completion(.failure(RequestError.networkError(error.localizedDescription)))
-            return
-        }
-        if (error != nil) {
-            print(error as Any)
-        } else {
-            let httpResponse = response as? HTTPURLResponse
-            print(httpResponse as Any)
-        }
-        
-        guard let data = data else {
-            print("Error: No data received")
-            completion(.failure(RequestError.dataError("No data received")))
-            return
-        }
-        print(data)
-        do {
-            if let jsonResult = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-               let classifications = jsonResult["classifications"] as? [[String: Any]],
-               let firstClassification = classifications.first,
-               let prediction = firstClassification["prediction"] as? String {
-                
-                print("Prediction: \(prediction)")
-                completion(.success(prediction))
-            } else {
-                print("Error: Unable to find the prediction")
-                completion(.failure(RequestError.predictionError("Unable to find the prediction")))
+            if let error = error {
+                completion(.failure(RequestError.networkError(error.localizedDescription)))
+                return
             }
-        } catch {
-            print("Error: Unable to parse JSON response")
-            completion(.failure(RequestError.parsingError("Unable to parse JSON response")))
+
+            guard let data = data else {
+                completion(.failure(RequestError.dataError("No data received")))
+                return
+            }
+
+            do {
+                let response = try JSONDecoder().decode(ClassificationResponse.self, from: data)
+                if let prediction = response.classifications.first?.prediction {
+                    completion(.success(prediction))
+                } else {
+                    completion(.failure(RequestError.predictionError("Prediction not found")))
+                }
+            } catch {
+                completion(.failure(RequestError.parsingError("Unable to parse JSON response")))
+            }
         }
+
+        dataTask.resume()
     }
-    
-    dataTask.resume()
-}

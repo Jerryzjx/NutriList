@@ -21,9 +21,6 @@
 		C42C743B2B4B0B5D004E0A2C /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = C42C743A2B4B0B5D004E0A2C /* Realtime */; };
 		C42C743D2B4B0B5D004E0A2C /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = C42C743C2B4B0B5D004E0A2C /* Storage */; };
 		C42C743F2B4B0B5D004E0A2C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = C42C743E2B4B0B5D004E0A2C /* Supabase */; };
-		C42C74482B4B0EAF004E0A2C /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74472B4B0EAF004E0A2C /* AppTextField.swift */; };
-		C42C744A2B4B0ED4004E0A2C /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */; };
-		C42C744C2B4B0EFE004E0A2C /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C744B2B4B0EFE004E0A2C /* AppButton.swift */; };
 		C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C744D2B4B0F14004E0A2C /* DatabaseManager.swift */; };
 		C42C74512B4B0F3E004E0A2C /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74502B4B0F3E004E0A2C /* AuthManager.swift */; };
 		C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74522B4B0F62004E0A2C /* SignInApple.swift */; };
@@ -36,7 +33,17 @@
 		C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */; };
 		C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */; };
 		C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74652B4B133A004E0A2C /* HomeView.swift */; };
+		C446AD8C2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */; };
 		C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */; };
+		C4A9CEF22B4C915B00047CDC /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF12B4C915B00047CDC /* AppButton.swift */; };
+		C4A9CEF42B4C915F00047CDC /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */; };
+		C4A9CEF62B4C916200047CDC /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF52B4C916200047CDC /* AppTextField.swift */; };
+		C4A9CEF92B4C987A00047CDC /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF82B4C987A00047CDC /* AuthState.swift */; };
+		C4B945B72B4F267400EDD42F /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945B62B4F267400EDD42F /* AppIcon.swift */; };
+		C4B945BB2B4F27C800EDD42F /* AppTextFieldV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */; };
+		C4B945BD2B4F290700EDD42F /* AppSecureFieldV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */; };
+		C4B945BF2B4F2AC000EDD42F /* WelcomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945BE2B4F2AC000EDD42F /* WelcomeText.swift */; };
+		C4B945C12B4F2BD500EDD42F /* Colour.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B945C02B4F2BD500EDD42F /* Colour.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +75,6 @@
 		C42C74202B4B077F004E0A2C /* NutriListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74242B4B077F004E0A2C /* NutriListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITests.swift; sourceTree = "<group>"; };
 		C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C42C74472B4B0EAF004E0A2C /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppTextField.swift; path = ../Components/AppTextField.swift; sourceTree = "<group>"; };
-		C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppSecureField.swift; path = ../Components/AppSecureField.swift; sourceTree = "<group>"; };
-		C42C744B2B4B0EFE004E0A2C /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppButton.swift; path = ../Components/AppButton.swift; sourceTree = "<group>"; };
 		C42C744D2B4B0F14004E0A2C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C42C74502B4B0F3E004E0A2C /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		C42C74522B4B0F62004E0A2C /* SignInApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInApple.swift; sourceTree = "<group>"; };
@@ -85,7 +89,17 @@
 		C42C74652B4B133A004E0A2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C42C74672B4B142A004E0A2C /* NutriList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutriList.entitlements; sourceTree = "<group>"; };
 		C42C746A2B4B2900004E0A2C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "GroceryItemClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CohereAPIManager.swift; sourceTree = "<group>"; };
+		C4A9CEF12B4C915B00047CDC /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
+		C4A9CEF52B4C916200047CDC /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		C4A9CEF82B4C987A00047CDC /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
+		C4B945B62B4F267400EDD42F /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
+		C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldV2.swift; sourceTree = "<group>"; };
+		C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureFieldV2.swift; sourceTree = "<group>"; };
+		C4B945BE2B4F2AC000EDD42F /* WelcomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeText.swift; sourceTree = "<group>"; };
+		C4B945C02B4F2BD500EDD42F /* Colour.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colour.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +165,7 @@
 				C42C74412B4B0C8D004E0A2C /* View */,
 				C42C74092B4B077C004E0A2C /* NutriListApp.swift */,
 				C42C740D2B4B077E004E0A2C /* Assets.xcassets */,
+				C4B945C02B4F2BD500EDD42F /* Colour.xcassets */,
 				C42C740F2B4B077E004E0A2C /* Preview Content */,
 			);
 			path = NutriList;
@@ -184,7 +199,7 @@
 		C42C74412B4B0C8D004E0A2C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C4A9CEF02B4C8FF800047CDC /* UIComponents */,
+				C4A9CEF72B4C917B00047CDC /* UIComponents */,
 				C42C740B2B4B077C004E0A2C /* ContentView.swift */,
 				C42C74542B4B0FA2004E0A2C /* SignInView.swift */,
 				C42C74562B4B0FB3004E0A2C /* RegistrationView.swift */,
@@ -209,6 +224,7 @@
 		C42C74432B4B0CD1004E0A2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */,
 				C42C745A2B4B129A004E0A2C /* ToDoModel.swift */,
 			);
 			path = Models;
@@ -235,6 +251,7 @@
 			children = (
 				C42C74502B4B0F3E004E0A2C /* AuthManager.swift */,
 				C42C74522B4B0F62004E0A2C /* SignInApple.swift */,
+				C4A9CEF82B4C987A00047CDC /* AuthState.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -248,12 +265,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		C4A9CEF02B4C8FF800047CDC /* UIComponents */ = {
+		C4A9CEF72B4C917B00047CDC /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				C42C74472B4B0EAF004E0A2C /* AppTextField.swift */,
-				C42C74492B4B0ED4004E0A2C /* AppSecureField.swift */,
-				C42C744B2B4B0EFE004E0A2C /* AppButton.swift */,
+				C4A9CEF12B4C915B00047CDC /* AppButton.swift */,
+				C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */,
+				C4A9CEF52B4C916200047CDC /* AppTextField.swift */,
+				C4B945B62B4F267400EDD42F /* AppIcon.swift */,
+				C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */,
+				C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */,
+				C4B945BE2B4F2AC000EDD42F /* WelcomeText.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -374,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42C74112B4B077E004E0A2C /* Preview Assets.xcassets in Resources */,
+				C4B945C12B4F2BD500EDD42F /* Colour.xcassets in Resources */,
 				C42C740E2B4B077E004E0A2C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,25 +421,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A9CEF42B4C915F00047CDC /* AppSecureField.swift in Sources */,
+				C446AD8C2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel in Sources */,
 				C42C74552B4B0FA2004E0A2C /* SignInView.swift in Sources */,
 				C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */,
 				C42C74512B4B0F3E004E0A2C /* AuthManager.swift in Sources */,
+				C4A9CEF22B4C915B00047CDC /* AppButton.swift in Sources */,
 				C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */,
+				C4B945BD2B4F290700EDD42F /* AppSecureFieldV2.swift in Sources */,
 				C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */,
+				C4B945BF2B4F2AC000EDD42F /* WelcomeText.swift in Sources */,
 				C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */,
+				C4B945BB2B4F27C800EDD42F /* AppTextFieldV2.swift in Sources */,
 				C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */,
+				C4B945B72B4F267400EDD42F /* AppIcon.swift in Sources */,
 				C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */,
 				C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */,
 				C42C745B2B4B129A004E0A2C /* ToDoModel.swift in Sources */,
 				C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */,
-				C42C74482B4B0EAF004E0A2C /* AppTextField.swift in Sources */,
-				C42C744A2B4B0ED4004E0A2C /* AppSecureField.swift in Sources */,
 				C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */,
 				C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */,
 				C42C745D2B4B12BF004E0A2C /* ToDoViewModel.swift in Sources */,
 				C42C74592B4B124F004E0A2C /* SignInViewModel.swift in Sources */,
-				C42C744C2B4B0EFE004E0A2C /* AppButton.swift in Sources */,
+				C4A9CEF92B4C987A00047CDC /* AuthState.swift in Sources */,
 				C42C74572B4B0FB3004E0A2C /* RegistrationView.swift in Sources */,
+				C4A9CEF62B4C916200047CDC /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +622,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerryzjx.NutriList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -624,7 +652,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jerryzjx.NutriList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

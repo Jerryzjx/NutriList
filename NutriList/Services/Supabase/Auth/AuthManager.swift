@@ -13,13 +13,16 @@ struct AppUser {
     let email: String?
 }
 
-class AuthManager {
+class AuthManager: ObservableObject{
     
     static let shared = AuthManager()
     
     private init(){}
     
+    @Published var isAuthenticated = false
+    @Published var currentUser: AppUser?
     
+    let client = SupabaseClient(supabaseURL: "URL", supabaseKey: "KEY")
     
     func getCurrentSession() async throws -> AppUser {
         let session = try await client.auth.session
@@ -40,15 +43,24 @@ class AuthManager {
     // MARK: Sign In
     func signInWithEmail(email: String, password: String) async throws -> AppUser {
         let session = try await client.auth.signIn(email: email, password: password)
+        DispatchQueue.main.async {
+                    self.isAuthenticated = true
+                }
         return AppUser(uid: session.user.id.uuidString, email:session.user.email)
     }
     
     func signInWithApple(idToken: String, nonce: String) async throws -> AppUser {
-            let session = try await client.auth.signInWithIdToken(credentials: .init(provider: .apple, idToken: idToken, nonce: nonce))
+        let session = try await client.auth.signInWithIdToken(credentials: .init(provider: .apple, idToken: idToken, nonce: nonce))
+        DispatchQueue.main.async {
+                    self.isAuthenticated = true
+                }
         return AppUser(uid: session.user.id.uuidString, email:session.user.email)
     }
     
     func signOut() async throws {
-        try await client.auth.signOut()
-    }
+            try await client.auth.signOut()
+            DispatchQueue.main.async {
+                self.isAuthenticated = false
+            }
+        }
 }

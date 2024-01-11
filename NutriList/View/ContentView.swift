@@ -9,14 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     @State var appUser: AppUser? = nil
-    
+    @StateObject var authManager = AuthManager.shared
     var body: some View {
         ZStack {
-            if let appUser = appUser {
-                ToDoView(appUser: appUser)
+            if authManager.isAuthenticated {
+                if let appUser = appUser {
+                    ToDoView(appUser: appUser)
+                } else {
+                    SignInView(appUser: $appUser)
+                }
             } else {
                 SignInView(appUser: $appUser)
             }
+            
         }
         .onAppear {
             Task {

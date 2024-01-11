@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoView: View {
     @StateObject var viewModel = ToDoViewModel()
-    
+    @State private var showSignOutAlert = false
     @State var appUser: AppUser
     
     var body: some View {
@@ -31,15 +31,27 @@ struct ToDoView: View {
             .toolbar {
                 
                 HStack {
-                    NavigationLink {
-                        SignOutView(appUser: $appUser)
+                    Button {
+                        showSignOutAlert = true
                     } label: {
                         Image(systemName: "rectangle.portrait.and.arrow.right")
                             .resizable()
                             .frame(width: 32, height: 32)
                             .padding(.all, 2)
                             .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
-                }
+                    }.alert(isPresented: $showSignOutAlert) {
+                        Alert(title: Text("Sign Out"), message: Text("Are you sure you want to sign out?"), primaryButton: .destructive(Text("Sign Out")) {
+                            Task{
+                                do {
+                                    try await AuthManager.shared.signOut()
+                                    appUser = .init(uid: "", email: "")
+                                    
+                                } catch {
+                                    print("unable to sign out")
+                                }
+                            }
+                        }, secondaryButton: .cancel())
+                    }
                     NavigationLink {
                         CreateToDoView(appUser: appUser)
                             .environmentObject(viewModel)
