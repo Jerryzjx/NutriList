@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Grocery list with smart classification. Built with Swift ,SwiftUI & Supabase.
+  Grocery list with smart classification. Built with Swift ,SwiftUI, Supabase & CohereAPI
 </p>
 <!--
 <p align="center">
@@ -33,6 +33,13 @@
 [![Gitter chat](https://img.shields.io/badge/chat-on_gitter-008080.svg?style=flat-square)](https://gitter.im/git-point) -->
 
 **Available for iOS, currently in Beta Test.**
+
+## Features:
+- User Authentication with Supabase using Email or Apple Sign In
+- Create grocery items with classification powered by Cohere API
+- Store & Fetch user items from Supabase Database
+- Minimalist UI Design
+- Extensive Unit Test with 71% Code coverage
 
 <p align="left">
   <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_8995.PNG" width=300>
