@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Grocery list with smart classification. Built with Swift ,SwiftUI & Supabase.
+  Grocery list with smart classification. Built with Swift ,SwiftUI, Supabase & CohereAPI
 </p>
 <!--
 <p align="center">
