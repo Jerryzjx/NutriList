@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "createdAt": "2021-01-01T00:00:00Z",
+        "text": "Sample ToDo Item",
+        "userUid": "b36639fd-5854-4651-b205-935e82aa899d",
+        "category": "General"
+    },
+]
+

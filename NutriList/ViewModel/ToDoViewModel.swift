@@ -8,6 +8,11 @@
 import Foundation
 
 class ToDoViewModel: ObservableObject {
+    private let databaseService: DatabaseService
+    
+    init(databaseService: DatabaseService = DatabaseManager.shared) {
+        self.databaseService = databaseService
+    }
     
     @Published var todos = [ToDo]()
     
@@ -20,20 +25,20 @@ class ToDoViewModel: ObservableObject {
         }
         
         let toDo = ToDoPayload(text: text, userUid: uid, category: category)
-            //print("Creating todo item")
-        try await DatabaseManager.shared.createToDOItem(item: toDo)
+        //print("Creating todo item")
+        try await databaseService.createToDoItem(item: toDo)
     }
     
     // MARK: Read
     @MainActor
     func fetchItems(for uid: String) async throws {
-       todos = try await DatabaseManager.shared.fetchToDoItems(for: uid)
+        todos = try await databaseService.fetchToDoItems(for: uid)
     }
     
     // MARK: Delete
     @MainActor
     func deleteItem(todo: ToDo) async throws {
-        try await DatabaseManager.shared.deleteToDoItem(id: todo.id)
+        try await databaseService.deleteToDoItem(id: todo.id)
         todos.removeAll(where: { $0.id == todo.id })
     }
 }

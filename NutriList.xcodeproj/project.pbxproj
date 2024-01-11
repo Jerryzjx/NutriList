@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C412E8D02B50403100CB7764 /* MockDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */; };
+		C412E8D22B5040EA00CB7764 /* ToDoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */; };
+		C412E8D42B504A7600CB7764 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D32B504A7600CB7764 /* Mockable.swift */; };
+		C412E8D62B504B0E00CB7764 /* Supabase.json in Resources */ = {isa = PBXBuildFile; fileRef = C412E8D52B504B0E00CB7764 /* Supabase.json */; };
 		C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4149BD22B4BB0B500182109 /* SignOutView.swift */; };
 		C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74092B4B077C004E0A2C /* NutriListApp.swift */; };
 		C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C740B2B4B077C004E0A2C /* ContentView.swift */; };
 		C42C740E2B4B077E004E0A2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42C740D2B4B077E004E0A2C /* Assets.xcassets */; };
 		C42C74112B4B077E004E0A2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42C74102B4B077E004E0A2C /* Preview Assets.xcassets */; };
-		C42C741B2B4B077F004E0A2C /* NutriListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C741A2B4B077F004E0A2C /* NutriListTests.swift */; };
 		C42C74252B4B077F004E0A2C /* NutriListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74242B4B077F004E0A2C /* NutriListUITests.swift */; };
 		C42C74272B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */; };
 		C42C74352B4B0B5D004E0A2C /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = C42C74342B4B0B5D004E0A2C /* Auth */; };
@@ -64,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseManager.swift; sourceTree = "<group>"; };
+		C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModelTests.swift; sourceTree = "<group>"; };
+		C412E8D32B504A7600CB7764 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		C412E8D52B504B0E00CB7764 /* Supabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Supabase.json; sourceTree = "<group>"; };
 		C4149BD22B4BB0B500182109 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
 		C42C74062B4B077C004E0A2C /* NutriList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74092B4B077C004E0A2C /* NutriListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListApp.swift; sourceTree = "<group>"; };
@@ -71,7 +78,6 @@
 		C42C740D2B4B077E004E0A2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42C74102B4B077E004E0A2C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C42C74162B4B077F004E0A2C /* NutriListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C42C741A2B4B077F004E0A2C /* NutriListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListTests.swift; sourceTree = "<group>"; };
 		C42C74202B4B077F004E0A2C /* NutriListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutriListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74242B4B077F004E0A2C /* NutriListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITests.swift; sourceTree = "<group>"; };
 		C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -182,7 +188,10 @@
 		C42C74192B4B077F004E0A2C /* NutriListTests */ = {
 			isa = PBXGroup;
 			children = (
-				C42C741A2B4B077F004E0A2C /* NutriListTests.swift */,
+				C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */,
+				C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */,
+				C412E8D32B504A7600CB7764 /* Mockable.swift */,
+				C412E8D52B504B0E00CB7764 /* Supabase.json */,
 			);
 			path = NutriListTests;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C412E8D62B504B0E00CB7764 /* Supabase.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +463,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42C741B2B4B077F004E0A2C /* NutriListTests.swift in Sources */,
+				C412E8D02B50403100CB7764 /* MockDatabaseManager.swift in Sources */,
+				C412E8D42B504A7600CB7764 /* Mockable.swift in Sources */,
+				C412E8D22B5040EA00CB7764 /* ToDoViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

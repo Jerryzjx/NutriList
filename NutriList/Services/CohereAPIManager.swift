@@ -28,7 +28,7 @@ func fetchPrediction(input: String, completion: @escaping (Result<String, Reques
     let headers = [
       "accept": "application/json",
       "content-type": "application/json",
-      "authorization": "Bearer 83I7hPYNMeTlob2CGyKt63bMGzEwq8SiHShTMW0C"
+      "authorization": "TOKEN"
     ]
     
     let parameters = [
