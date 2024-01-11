@@ -7,6 +7,3 @@
 
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
-API_URL = "https://hwzaoukqpaejfcfmhqbs.supabase.co"
-API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh3emFvdWtxcGFlamZjZm1ocWJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDQ2NDU3MDUsImV4cCI6MjAyMDIyMTcwNX0.hyH8J5nGOIgXUzplOQqtF0WI2nqbZWnU4bYKjPYi4HE"
-

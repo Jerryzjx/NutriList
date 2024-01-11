@@ -71,6 +71,7 @@
 		C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModelTests.swift; sourceTree = "<group>"; };
 		C412E8D32B504A7600CB7764 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C412E8D52B504B0E00CB7764 /* Supabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Supabase.json; sourceTree = "<group>"; };
+		C412E8D72B50577B00CB7764 /* NutriList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NutriList.xctestplan; sourceTree = "<group>"; };
 		C4149BD22B4BB0B500182109 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
 		C42C74062B4B077C004E0A2C /* NutriList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74092B4B077C004E0A2C /* NutriListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListApp.swift; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		C42C73FD2B4B077C004E0A2C = {
 			isa = PBXGroup;
 			children = (
+				C412E8D72B50577B00CB7764 /* NutriList.xctestplan */,
 				C42C746A2B4B2900004E0A2C /* Config.xcconfig */,
 				C42C74082B4B077C004E0A2C /* NutriList */,
 				C42C74192B4B077F004E0A2C /* NutriListTests */,

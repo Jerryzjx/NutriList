@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "298F0A67-ABD1-4BFC-BF87-478A0BA026CD",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:NutriList.xcodeproj",
+      "identifier" : "C42C74052B4B077C004E0A2C",
+      "name" : "NutriList"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:NutriList.xcodeproj",
+        "identifier" : "C42C74152B4B077F004E0A2C",
+        "name" : "NutriListTests"
+      }
+    },
+    {
+      "enabled" : false,
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:NutriList.xcodeproj",
+        "identifier" : "C42C741F2B4B077F004E0A2C",
+        "name" : "NutriListUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -16,21 +16,26 @@ class MockDatabaseManager: DatabaseService, Mockable {
         if shouldReturnError {
             throw NSError(domain: "Mock Error", code: 0, userInfo: nil)
         }
-        // Optionally, add item to mockToDoItems to simulate database insertion
+        // Simulate database insertion
+               mockToDoItems.append(ToDo(id: mockToDoItems.count + 1,
+                                         createdAt: "",
+                                         text: item.text,
+                                         userUid: item.userUid,
+                                         category: item.category))
     }
 
     func fetchToDoItems(for uid: String) async throws -> [ToDo] {
         if shouldReturnError {
             throw NSError(domain: "Mock Error", code: 0, userInfo: nil)
         }
-        return mockToDoItems
+        return mockToDoItems.filter { $0.userUid == uid }
     }
 
     func deleteToDoItem(id: Int) async throws {
         if shouldReturnError {
             throw NSError(domain: "Mock Error", code: 0, userInfo: nil)
         }
-        // Optionally, remove item from mockToDoItems to simulate database deletion
+        mockToDoItems.removeAll { $0.id == id }
     }
 
     // Load mock data from a JSON file
