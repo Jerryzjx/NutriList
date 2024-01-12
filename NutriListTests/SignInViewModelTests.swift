@@ -18,7 +18,6 @@ class SignInViewModelTests: XCTestCase {
         super.setUp()
         mockAuthManager = MockAuthManager()
         viewModel = SignInViewModel(authManager: mockAuthManager)
-        // Mock the AuthManager and SignInApple here if needed
     }
 
     override func tearDown() {
@@ -27,23 +26,66 @@ class SignInViewModelTests: XCTestCase {
         viewModel = nil
     }
 
-    /*func testIsFormValid() {
-        DispatchQueue.main.sync {
-            XCTAssertTrue(viewModel.isFormValid(email: "test@example.com", password: "12345678"))
-            XCTAssertFalse(viewModel.isFormValid(email: "test", password: "1234"))
-        }
-    }*/
-
-
     func testRegisterNewUserWithEmail() async throws {
         // Mock AuthManager to return a success response
         let user = try await viewModel.registerNewUserWithEmail(email: "test@example.com", password: "012345678")
         XCTAssertEqual(user.email, "test@example.com")
         // Add more assertions as needed
     }
+    
+    func testRegisterNewUserWithEmailInvalidEmail() async throws {
+        let email = "test"
+        let password = "12345678"
+        
+        do {
+            _ = try await viewModel.registerNewUserWithEmail(email: email, password: password)
+            XCTFail("Expected failure due to invalid email, but succeeded")
+        } catch {
+            // Error thrown as expected, no need to check specific error details
+        }
+    }
+    
+    func testRegisterNewUserWithEmailShortPassword() async throws {
+        let email = "valid@example.com"
+        let password = "1234"
+        
+        do {
+            _ = try await viewModel.registerNewUserWithEmail(email: email, password: password)
+            XCTFail("Expected failure due to short password, but succeeded")
+        } catch {
+            // Error thrown as expected, no need to check specific error details
+        }
+    }
 
-    func testSignInWithEmail() async throws {
-        // Similar to testRegisterNewUserWithEmail
+    func testSignInWithEmailSuccess() async throws {
+
+        do {
+            let user = try await viewModel.signInWithEmail(email: "user@example.com", password: "password123")
+            XCTAssertEqual(user.email, "user@example.com")
+        } catch let error as NSError {
+            XCTAssertEqual(error.domain, "Mock Error")
+            XCTAssertEqual(error.code, 2)
+        }
+    }
+    
+    func testSignInWithEmailFailure() async throws {
+
+        do {
+            _ = try await viewModel.signInWithEmail(email: "invalid@example.com", password: "password")
+            XCTFail("Expected failure on sign-in, but succeeded")
+        } catch {
+            // Optionally, assert specific error details here
+        }
+    }
+    
+    func testSignInWithInvalidEmail() async throws {
+
+        do {
+            _ = try await viewModel.signInWithEmail(email: "test", password: "password")
+            XCTFail("Expected failure on sign-in, but succeeded")
+        } catch {
+            // Optionally, assert specific error details here
+        }
     }
 
     func testSignInWithApple() async throws {

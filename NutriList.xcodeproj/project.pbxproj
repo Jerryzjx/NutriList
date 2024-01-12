@@ -14,6 +14,7 @@
 		C412E8D92B5059A800CB7764 /* SignInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */; };
 		C412E8DB2B505B1B00CB7764 /* MockAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */; };
 		C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4149BD22B4BB0B500182109 /* SignOutView.swift */; };
+		C41B54A62B50F50A000EF754 /* LoginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B54A52B50F50A000EF754 /* LoginViewUITests.swift */; };
 		C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74092B4B077C004E0A2C /* NutriListApp.swift */; };
 		C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C740B2B4B077C004E0A2C /* ContentView.swift */; };
 		C42C740E2B4B077E004E0A2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42C740D2B4B077E004E0A2C /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
 		C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthManager.swift; sourceTree = "<group>"; };
 		C4149BD22B4BB0B500182109 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
+		C41B54A52B50F50A000EF754 /* LoginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITests.swift; sourceTree = "<group>"; };
 		C42C74062B4B077C004E0A2C /* NutriList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74092B4B077C004E0A2C /* NutriListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListApp.swift; sourceTree = "<group>"; };
 		C42C740B2B4B077C004E0A2C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 			children = (
 				C42C74242B4B077F004E0A2C /* NutriListUITests.swift */,
 				C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */,
+				C41B54A52B50F50A000EF754 /* LoginViewUITests.swift */,
 			);
 			path = NutriListUITests;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			files = (
 				C42C74252B4B077F004E0A2C /* NutriListUITests.swift in Sources */,
 				C42C74272B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift in Sources */,
+				C41B54A62B50F50A000EF754 /* LoginViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

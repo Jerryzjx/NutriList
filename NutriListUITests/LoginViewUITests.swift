@@ -1,13 +1,15 @@
+
+
 //
-//  NutriListUITests.swift
+//  LoginViewUITests.swift
 //  NutriListUITests
 //
-//  Created by leonard on 2024-01-07.
+//  Created by leonard on 2024-01-11.
 //
 
 import XCTest
 
-final class NutriListUITests: XCTestCase {
+final class LoginViewUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,9 +28,22 @@ final class NutriListUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
+        
+        app.textFields["Email address"].tap()
 
+        let passwordSecureTextField = app.secureTextFields["Password"]
+        passwordSecureTextField.tap()
+        passwordSecureTextField.tap()
+        app.buttons["Sign In"].tap()
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
-   
+    func testLaunchPerformance() throws {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
+            // This measures how long it takes to launch your application.
+            measure(metrics: [XCTApplicationLaunchMetric()]) {
+                XCUIApplication().launch()
+            }
+        }
+    }
 }

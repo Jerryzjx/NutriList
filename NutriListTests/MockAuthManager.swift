@@ -13,15 +13,15 @@ class MockAuthManager: AuthManaging {
     var currentUser: AppUser?
 
     func getCurrentSession() async throws -> AppUser {
-        // Example: Return a mock user
         return AppUser(uid: "mockUID", email: "mock@example.com")
     }
 
     func registerNewUserWithEmail(email: String, password: String) async throws -> AppUser {
-        // Example: Return a mock user or throw an error based on a condition
+        
         if email.isValidEmail() && password.count > 7 {
             return AppUser(uid: "mockUID", email: email)
-        } else {
+        }
+        else {
             throw NSError(domain: "Mock Error", code: 1, userInfo: nil)
         }
     }
