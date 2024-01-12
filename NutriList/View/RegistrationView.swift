@@ -26,7 +26,7 @@ struct RegistrationView: View {
         Button {
             Task {
                 do {
-                    let appUser = try await viewModel.registerNewUserWIthEmail(email: email, password: password)
+                    let user = try await viewModel.registerNewUserWithEmail(email: email, password: password)
                     self.appUser = appUser
                     dismiss.callAsFunction()
                 } catch {

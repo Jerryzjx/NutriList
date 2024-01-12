@@ -13,7 +13,18 @@ struct AppUser {
     let email: String?
 }
 
-class AuthManager: ObservableObject{
+protocol AuthManaging {
+    var isAuthenticated: Bool { get set }
+    var currentUser: AppUser? { get set }
+    func getCurrentSession() async throws -> AppUser
+    func registerNewUserWithEmail(email: String, password: String) async throws -> AppUser
+    func signInWithEmail(email: String, password: String) async throws -> AppUser
+    func signInWithApple(idToken: String, nonce: String) async throws -> AppUser
+    func signOut() async throws
+}
+
+
+class AuthManager: ObservableObject, AuthManaging{
     
     static let shared = AuthManager()
     

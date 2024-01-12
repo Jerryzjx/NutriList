@@ -11,6 +11,8 @@
 		C412E8D22B5040EA00CB7764 /* ToDoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */; };
 		C412E8D42B504A7600CB7764 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D32B504A7600CB7764 /* Mockable.swift */; };
 		C412E8D62B504B0E00CB7764 /* Supabase.json in Resources */ = {isa = PBXBuildFile; fileRef = C412E8D52B504B0E00CB7764 /* Supabase.json */; };
+		C412E8D92B5059A800CB7764 /* SignInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */; };
+		C412E8DB2B505B1B00CB7764 /* MockAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */; };
 		C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4149BD22B4BB0B500182109 /* SignOutView.swift */; };
 		C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74092B4B077C004E0A2C /* NutriListApp.swift */; };
 		C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C740B2B4B077C004E0A2C /* ContentView.swift */; };
@@ -72,6 +74,8 @@
 		C412E8D32B504A7600CB7764 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		C412E8D52B504B0E00CB7764 /* Supabase.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Supabase.json; sourceTree = "<group>"; };
 		C412E8D72B50577B00CB7764 /* NutriList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NutriList.xctestplan; sourceTree = "<group>"; };
+		C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
+		C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthManager.swift; sourceTree = "<group>"; };
 		C4149BD22B4BB0B500182109 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
 		C42C74062B4B077C004E0A2C /* NutriList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74092B4B077C004E0A2C /* NutriListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListApp.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */,
 				C412E8D32B504A7600CB7764 /* Mockable.swift */,
 				C412E8D52B504B0E00CB7764 /* Supabase.json */,
+				C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */,
+				C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */,
 			);
 			path = NutriListTests;
 			sourceTree = "<group>";
@@ -465,6 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C412E8D92B5059A800CB7764 /* SignInViewModelTests.swift in Sources */,
+				C412E8DB2B505B1B00CB7764 /* MockAuthManager.swift in Sources */,
 				C412E8D02B50403100CB7764 /* MockDatabaseManager.swift in Sources */,
 				C412E8D42B504A7600CB7764 /* Mockable.swift in Sources */,
 				C412E8D22B5040EA00CB7764 /* ToDoViewModelTests.swift in Sources */,
