@@ -44,7 +44,6 @@
 		C4A9CEF22B4C915B00047CDC /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF12B4C915B00047CDC /* AppButton.swift */; };
 		C4A9CEF42B4C915F00047CDC /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */; };
 		C4A9CEF62B4C916200047CDC /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF52B4C916200047CDC /* AppTextField.swift */; };
-		C4A9CEF92B4C987A00047CDC /* AuthState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF82B4C987A00047CDC /* AuthState.swift */; };
 		C4B945B72B4F267400EDD42F /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945B62B4F267400EDD42F /* AppIcon.swift */; };
 		C4B945BB2B4F27C800EDD42F /* AppTextFieldV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */; };
 		C4B945BD2B4F290700EDD42F /* AppSecureFieldV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */; };
@@ -107,7 +106,6 @@
 		C4A9CEF12B4C915B00047CDC /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
 		C4A9CEF52B4C916200047CDC /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
-		C4A9CEF82B4C987A00047CDC /* AuthState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthState.swift; sourceTree = "<group>"; };
 		C4B945B62B4F267400EDD42F /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextFieldV2.swift; sourceTree = "<group>"; };
 		C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureFieldV2.swift; sourceTree = "<group>"; };
@@ -271,7 +269,6 @@
 			children = (
 				C42C74502B4B0F3E004E0A2C /* AuthManager.swift */,
 				C42C74522B4B0F62004E0A2C /* SignInApple.swift */,
-				C4A9CEF82B4C987A00047CDC /* AuthState.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -464,7 +461,6 @@
 				C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */,
 				C42C745D2B4B12BF004E0A2C /* ToDoViewModel.swift in Sources */,
 				C42C74592B4B124F004E0A2C /* SignInViewModel.swift in Sources */,
-				C4A9CEF92B4C987A00047CDC /* AuthState.swift in Sources */,
 				C42C74572B4B0FB3004E0A2C /* RegistrationView.swift in Sources */,
 				C4A9CEF62B4C916200047CDC /* AppTextField.swift in Sources */,
 			);

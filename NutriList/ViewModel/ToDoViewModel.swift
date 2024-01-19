@@ -7,6 +7,12 @@
 
 import Foundation
 
+extension NSError {
+    static func duplicateItemError() -> NSError {
+        return NSError(domain: "ToDoViewModel", code: 1001, userInfo: [NSLocalizedDescriptionKey: "A duplicate item exists."])
+    }
+}
+
 class ToDoViewModel: ObservableObject {
     private let databaseService: DatabaseService
     
@@ -21,7 +27,7 @@ class ToDoViewModel: ObservableObject {
     func createItem(text: String, uid: String, category: String) async throws {
         guard !todos.contains(where: { $0.text.lowercased() == text.lowercased() }) else {
             print("Already in todo list")
-            throw NSError()
+            throw NSError.duplicateItemError()
         }
         
         let toDo = ToDoPayload(text: text, userUid: uid, category: category)

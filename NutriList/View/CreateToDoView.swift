@@ -16,6 +16,9 @@ struct CreateToDoView: View {
     @State private var predictionResult: String = ""
     @State var text = " "
     
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
     @State var appUser: AppUser
     
     // Initialize the text classifier
@@ -71,12 +74,16 @@ struct CreateToDoView: View {
             }
             .padding(.horizontal, 24)
         }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Duplicate Item"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.all)
     }
+    
     private func classifyText(_ inputText: String) {
         let capitalizedText = inputText.capitalized
-
+        
         DispatchQueue.global(qos: .userInitiated).async {
             let result = predictCategory(for: capitalizedText)
             DispatchQueue.main.async {
@@ -101,12 +108,20 @@ struct CreateToDoView: View {
     
     private func handlePredictionResult(result: String) {
         self.predictionResult = result
+        
         Task {
             do {
                 try await viewModel.createItem(text: text, uid: appUser.uid, category: predictionResult)
                 dismiss()
-            } catch {
-                print("Error creating ToDo item: \(error)")
+            } catch let error as NSError {
+                // Check if the error is the specific duplicate item error
+                if error.domain == "ToDoViewModel" && error.code == 1001 {
+                    alertMessage = error.localizedDescription
+                    showAlert = true
+                } else {
+                    // Handle other NSError instances differently if needed
+                    dismiss()
+                }
             }
         }
     }
