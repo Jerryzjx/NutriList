@@ -13,6 +13,9 @@ struct SignInView: View {
     @State private var password = ""
     @State private var isRegisterationPresented = false
     
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    
     @Binding var appUser: AppUser?
     var body: some View {
         VStack (spacing: 30) {
@@ -37,6 +40,8 @@ struct SignInView: View {
                        let appUser = try await viewModel.signInWithEmail(email: email, password: password)
                         self.appUser = appUser
                     } catch {
+                        self.alertMessage = "Issue with sign in. Please check your email and password."
+                        self.showAlert = true
                         print("issue with sign in")
                     }
                 }
@@ -76,6 +81,9 @@ struct SignInView: View {
             }
             .padding(.top)
             .padding(.horizontal, 24)
+            .alert(isPresented: $showAlert) { // Alert modifier
+                        Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                    }
         }
         
     }
