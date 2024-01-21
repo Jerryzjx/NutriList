@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		C412E8D62B504B0E00CB7764 /* Supabase.json in Resources */ = {isa = PBXBuildFile; fileRef = C412E8D52B504B0E00CB7764 /* Supabase.json */; };
 		C412E8D92B5059A800CB7764 /* SignInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */; };
 		C412E8DB2B505B1B00CB7764 /* MockAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */; };
-		C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4149BD22B4BB0B500182109 /* SignOutView.swift */; };
 		C41B54A62B50F50A000EF754 /* LoginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B54A52B50F50A000EF754 /* LoginViewUITests.swift */; };
 		C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74092B4B077C004E0A2C /* NutriListApp.swift */; };
 		C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C740B2B4B077C004E0A2C /* ContentView.swift */; };
@@ -40,6 +39,8 @@
 		C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */; };
 		C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74652B4B133A004E0A2C /* HomeView.swift */; };
 		C446AD8C2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */; };
+		C48980DD2B5AFE4B0031FA3C /* GroceryItemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48980DC2B5AFE4B0031FA3C /* GroceryItemUITests.swift */; };
+		C48980E12B5B14F30031FA3C /* SignInAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48980E02B5B14F30031FA3C /* SignInAppleView.swift */; };
 		C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */; };
 		C4A9CEF22B4C915B00047CDC /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF12B4C915B00047CDC /* AppButton.swift */; };
 		C4A9CEF42B4C915F00047CDC /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */; };
@@ -76,7 +77,6 @@
 		C412E8D72B50577B00CB7764 /* NutriList.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = NutriList.xctestplan; sourceTree = "<group>"; };
 		C412E8D82B5059A800CB7764 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
 		C412E8DA2B505B1B00CB7764 /* MockAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAuthManager.swift; sourceTree = "<group>"; };
-		C4149BD22B4BB0B500182109 /* SignOutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOutView.swift; sourceTree = "<group>"; };
 		C41B54A52B50F50A000EF754 /* LoginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITests.swift; sourceTree = "<group>"; };
 		C42C74062B4B077C004E0A2C /* NutriList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NutriList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42C74092B4B077C004E0A2C /* NutriListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutriListApp.swift; sourceTree = "<group>"; };
@@ -102,6 +102,8 @@
 		C42C74672B4B142A004E0A2C /* NutriList.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NutriList.entitlements; sourceTree = "<group>"; };
 		C42C746A2B4B2900004E0A2C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "GroceryItemClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		C48980DC2B5AFE4B0031FA3C /* GroceryItemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemUITests.swift; sourceTree = "<group>"; };
+		C48980E02B5B14F30031FA3C /* SignInAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleView.swift; sourceTree = "<group>"; };
 		C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CohereAPIManager.swift; sourceTree = "<group>"; };
 		C4A9CEF12B4C915B00047CDC /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				C42C74242B4B077F004E0A2C /* NutriListUITests.swift */,
 				C42C74262B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift */,
 				C41B54A52B50F50A000EF754 /* LoginViewUITests.swift */,
+				C48980DC2B5AFE4B0031FA3C /* GroceryItemUITests.swift */,
 			);
 			path = NutriListUITests;
 			sourceTree = "<group>";
@@ -225,7 +228,6 @@
 				C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */,
 				C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */,
 				C42C74652B4B133A004E0A2C /* HomeView.swift */,
-				C4149BD22B4BB0B500182109 /* SignOutView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -292,6 +294,7 @@
 				C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */,
 				C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */,
 				C4B945BE2B4F2AC000EDD42F /* WelcomeText.swift */,
+				C48980E02B5B14F30031FA3C /* SignInAppleView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -384,7 +387,7 @@
 				};
 			};
 			buildConfigurationList = C42C74012B4B077C004E0A2C /* Build configuration list for PBXProject "NutriList" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -450,11 +453,11 @@
 				C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */,
 				C4B945BF2B4F2AC000EDD42F /* WelcomeText.swift in Sources */,
 				C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */,
+				C48980E12B5B14F30031FA3C /* SignInAppleView.swift in Sources */,
 				C4B945BB2B4F27C800EDD42F /* AppTextFieldV2.swift in Sources */,
 				C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */,
 				C4B945B72B4F267400EDD42F /* AppIcon.swift in Sources */,
 				C42C744E2B4B0F14004E0A2C /* DatabaseManager.swift in Sources */,
-				C4149BD32B4BB0B500182109 /* SignOutView.swift in Sources */,
 				C42C745B2B4B129A004E0A2C /* ToDoModel.swift in Sources */,
 				C42C74622B4B12ED004E0A2C /* ToDoItemView.swift in Sources */,
 				C42C74532B4B0F62004E0A2C /* SignInApple.swift in Sources */,
@@ -484,6 +487,7 @@
 			files = (
 				C42C74252B4B077F004E0A2C /* NutriListUITests.swift in Sources */,
 				C42C74272B4B077F004E0A2C /* NutriListUITestsLaunchTests.swift in Sources */,
+				C48980DD2B5AFE4B0031FA3C /* GroceryItemUITests.swift in Sources */,
 				C41B54A62B50F50A000EF754 /* LoginViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

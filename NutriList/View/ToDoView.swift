@@ -61,6 +61,7 @@ struct ToDoView: View {
                             .frame(width: 32, height: 32)
                             .padding(.all, 2)
                             .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
+                            .accessibilityIdentifier("Add")
                 }
                 }
                 

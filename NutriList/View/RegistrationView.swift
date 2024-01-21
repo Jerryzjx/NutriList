@@ -17,8 +17,8 @@ struct RegistrationView: View {
     var body: some View {
         VStack {
             VStack (spacing: 10){
-                AppTextField(placeHolder: "Email address", text: $email)
-                AppSecureField(placeHolder: "Password", text: $password)
+                AppTextField(placeHolder: "Enter Your Email address", text: $email)
+                AppSecureField(placeHolder: "Password at least 7 characters long", text: $password)
             }
             .padding(.horizontal, 24)
         }
