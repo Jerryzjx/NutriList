@@ -14,13 +14,13 @@ struct AppSecureField: View {
     var body: some View {
         SecureField(placeHolder, text: $text)
             .padding()
-            .overlay{
+            .background{
                 RoundedRectangle(cornerRadius: 20)
                     .stroke(Color(uiColor: .secondaryLabel), lineWidth: 1)
             }
             .textInputAutocapitalization(.never)
             .autocorrectionDisabled()
-        
+            .accessibilityIdentifier(placeHolder) // Set accessibility identifier
     }
 }
 
