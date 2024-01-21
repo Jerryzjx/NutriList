@@ -40,7 +40,6 @@
 		C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42C74652B4B133A004E0A2C /* HomeView.swift */; };
 		C446AD8C2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */; };
 		C48980DD2B5AFE4B0031FA3C /* GroceryItemUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48980DC2B5AFE4B0031FA3C /* GroceryItemUITests.swift */; };
-		C48980E12B5B14F30031FA3C /* SignInAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48980E02B5B14F30031FA3C /* SignInAppleView.swift */; };
 		C4A9CEED2B4C8F4500047CDC /* CohereAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */; };
 		C4A9CEF22B4C915B00047CDC /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF12B4C915B00047CDC /* AppButton.swift */; };
 		C4A9CEF42B4C915F00047CDC /* AppSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */; };
@@ -103,7 +102,6 @@
 		C42C746A2B4B2900004E0A2C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		C446AD8B2B4E35470047F0C4 /* GroceryItemClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "GroceryItemClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		C48980DC2B5AFE4B0031FA3C /* GroceryItemUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryItemUITests.swift; sourceTree = "<group>"; };
-		C48980E02B5B14F30031FA3C /* SignInAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleView.swift; sourceTree = "<group>"; };
 		C4A9CEEC2B4C8F4500047CDC /* CohereAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CohereAPIManager.swift; sourceTree = "<group>"; };
 		C4A9CEF12B4C915B00047CDC /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
 		C4A9CEF32B4C915F00047CDC /* AppSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSecureField.swift; sourceTree = "<group>"; };
@@ -294,7 +292,6 @@
 				C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */,
 				C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */,
 				C4B945BE2B4F2AC000EDD42F /* WelcomeText.swift */,
-				C48980E02B5B14F30031FA3C /* SignInAppleView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -453,7 +450,6 @@
 				C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */,
 				C4B945BF2B4F2AC000EDD42F /* WelcomeText.swift in Sources */,
 				C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */,
-				C48980E12B5B14F30031FA3C /* SignInAppleView.swift in Sources */,
 				C4B945BB2B4F27C800EDD42F /* AppTextFieldV2.swift in Sources */,
 				C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */,
 				C4B945B72B4F267400EDD42F /* AppIcon.swift in Sources */,

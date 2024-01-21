@@ -12,6 +12,8 @@ struct RegistrationView: View {
     @EnvironmentObject var viewModel: SignInViewModel
     @State private var email = ""
     @State private var password = ""
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     @Binding var appUser: AppUser?
     
     var body: some View {
@@ -31,6 +33,8 @@ struct RegistrationView: View {
                     dismiss.callAsFunction()
                 } catch {
                     print("issue with sign in")
+                    self.alertMessage = "Invalid email or password."
+                    self.showAlert = true
                 }
             }
         } label: {
@@ -45,7 +49,11 @@ struct RegistrationView: View {
         }
         .padding(.top, 12)
         .padding(.horizontal, 24)
+        .alert(isPresented: $showAlert) { // Alert modifier
+                    Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                }
     }
+    
 }
 
 #Preview {
