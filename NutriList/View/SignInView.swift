@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+extension Animation {
+    static func ripple() -> Animation {
+        Animation.smooth(duration: 0.5)
+    }
+}
+
 struct SignInView: View {
     @StateObject var viewModel = SignInViewModel()
     @State private var email = ""
@@ -24,11 +30,9 @@ struct SignInView: View {
             Spacer()
             AppIcon()
             
-            
             WelcomeText()
                 .frame(width: UIScreen.main.bounds.width * 0.85, alignment: .topLeading)
-                .padding([.leading, .trailing]) // You might adjust this padding as needed
-            
+                .padding([.leading, .trailing])
             
             VStack (spacing: 10){
                 AppTextField(placeHolder: "Email address", text: $email)
@@ -39,6 +43,9 @@ struct SignInView: View {
             
             
             Button {
+                withAnimation(.easeInOut(duration: 1)) {
+    
+                                    }
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 Task {
                     do {
@@ -54,7 +61,7 @@ struct SignInView: View {
                 }
             } label: {
                 Text("Sign in")
-                    .font(Font.system(size: 21))
+                    .font(Font.system(size: 23))
                     .fontWeight(.semibold)
                     .padding()
                     .foregroundColor(Color(uiColor: .white))
@@ -62,12 +69,13 @@ struct SignInView: View {
                     .frame(height: 55)
             }
             .background {
-                RoundedRectangle(cornerRadius: 15, style: .continuous).foregroundColor(Color(uiColor: .systemTeal))
+                RoundedRectangle(cornerRadius: 15, style: .continuous).foregroundColor(Color("LightTeal"))
             }
+            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1)), radius: 4, x: 0, y: 2)
             .padding(.horizontal, 24)
             
-            VStack (spacing: 20){
-                Button {
+            VStack (spacing: 30){
+                Button(action: {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     Task {
                         do {
@@ -77,26 +85,27 @@ struct SignInView: View {
                             print("error signing in with apple")
                         }
                     }
-                } label: {
-                    Text("Sign in with Apple")
-                        .font(Font.system(size: 18))
-                        .fontWeight(.semibold)
+                }) {
+                    Label("Sign in with Apple", systemImage: "applelogo")
+                        .font(.system(size: 20, weight: .semibold))
+                        .imageScale(.large)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .foregroundColor(Color(uiColor: .white))
-                }
-                .background {
-                    RoundedRectangle(cornerRadius: 15, style: .continuous).foregroundColor(Color(uiColor: .black))
+                        .foregroundColor(.white)
+                        .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.1)), radius: 4, x: 0, y: 2)
+                        .background(RoundedRectangle(cornerRadius: 15, style: .continuous).foregroundColor(.black))
                 }
                 
                 Button("Don't have an account? Sign Up") {
                     isRegisterationPresented.toggle()
                 }
+                
                 .font(Font.system(size: 18))
                 .foregroundColor(Color(uiColor: .white))
                 .sheet(isPresented: $isRegisterationPresented) {
                     RegistrationView(appUser: $appUser)
                         .environmentObject(viewModel)
+                        .transition(.move(edge: .bottom).combined(with: .slide))
                 }
                 Spacer()
                 Spacer()
