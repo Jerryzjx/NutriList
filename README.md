@@ -44,13 +44,13 @@ If you are interested in testing the app, please feel free to email me: [![Email
 - Extensive Unit Test with 71% Code coverage
 
 <p align="left">
-  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9031.PNG" width=300>
+  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9031.PNG" width=350>
   
-  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9034.PNG" width=300>
+  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9034.PNG" width=350>
  
-  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9032.PNG" width=300>
+  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9032.PNG" width=350>
   
-  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9033.PNG" width=300>
+  <img src = "https://github.com/Jerryzjx/NutriList/blob/main/External/IMG_9033.PNG" width=350>
   
 </p>
 
