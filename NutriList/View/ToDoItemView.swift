@@ -10,79 +10,70 @@ import SwiftUI
 struct ToDoItemView: View {
     @EnvironmentObject var viewModel: ToDoViewModel
     @State var todo: ToDo
-    
-    @State var offset: CGFloat = 0
-    
+    @State private var isSelected: Bool = false
+
     var body: some View {
-        ZStack {
-            HStack {
-                Color.red
-                
-                Spacer()
-                
-                Image(systemName: "trash")
-                    .resizable()
-                    .frame(width: 32, height: 32, alignment: .trailing)
-                    .padding(.trailing, 20)
-            }
-            .background(.red)
-            .onTapGesture {
-                Task {
-                    do {
-                        try await viewModel.deleteItem(todo: todo)
-                    } catch {
-                        print("error deleting item")
-                        print(error)
+        HStack {
+            // Toggleable Circle SF Symbol
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                .font(.system(size: 28, weight: .regular))
+                .frame(width: 44, height: 44)
+                .foregroundColor(isSelected ? .green : .primary)
+                .padding(.leading, 20)
+                .onTapGesture {
+                    isSelected = true
+                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                    Task {
+                        do {
+                            try await viewModel.deleteItem(todo: todo)
+                            isSelected = false // Set isSelected to true only if deletion is successful
+                        } catch {
+                            print("Error deleting item: \(error)")
+                            UINotificationFeedbackGenerator().notificationOccurred(.error)
+                            isSelected = false // Reset isSelected to false if deletion fails
+                        }
                     }
                 }
-            }
-            
-            ZStack {
-                Color(red: 62/255, green: 207/255, blue: 142/255)
-                    .offset(x: offset)
-                
+            VStack(alignment: .listRowSeparatorLeading, spacing: 3) {
                 HStack {
+                    // Grocery Text
                     Text(todo.text)
-                        .foregroundColor(Color(red: 39/255, green: 40/255, blue: 39/255))
-                        .padding()
-                    
+                        .font(.headline)
+                        .fontWeight(.medium)
+                        .fixedSize(horizontal: false, vertical: true)
                     Spacer()
-                    
+                }
+
+                HStack {
+                    // Category Information
                     Text(todo.category)
-                        .foregroundColor(Color(red: 39/255, green: 40/255, blue: 39/255))
-                        .padding()
-                    
+                        .offset(x:3, y:0)
+                        .font(.subheadline)
+                        .foregroundColor(Color("LightGray"))
                     Spacer()
                 }
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color(red: 62/255, green: 207/255, blue: 142/255), lineWidth: 4)
-                    .shadow(color:Color(red: 39/255, green: 40/255, blue: 39/255), radius: 10)
-            )
-            
+            .frame(maxWidth:.infinity, alignment: .leading)
+            .frame(height: 70, alignment: .leading)
+            .clipped()
+
+
+            Spacer()
         }
-        .frame(height: 80)
-        .cornerRadius(20)
-        .gesture(
-            DragGesture()
-                .onChanged(onChange(value:))
+        .frame(height: 70)
+        .background(
+            .ultraThinMaterial,
+            in: RoundedRectangle(cornerRadius: 15)
         )
+        .padding([.leading, .trailing], 10)
+
     }
-    
-    func onChange(value: DragGesture.Value) {
-       
-        if value.translation.width < 0 {
-            offset = -75
-        } else {
-            offset = 0
-        }
-    }
-    
 }
 
-
-#Preview {
-    ToDoItemView(todo: .init(id: 0, createdAt: "", text: "Apple", userUid: "", category: "Fruit"))
-        .environmentObject(ToDoViewModel())
+// Preview
+struct ToDoItemView_Previews: PreviewProvider {
+    static var previews: some View {
+        ToDoItemView(todo: .init(id: 0, createdAt: "", text: "Apple", userUid: "", category: "Fruit"))
+            .environmentObject(ToDoViewModel())
+    }
 }

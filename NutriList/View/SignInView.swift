@@ -34,7 +34,7 @@ struct SignInView: View {
                 .frame(width: UIScreen.main.bounds.width * 0.85, alignment: .topLeading)
                 .padding([.leading, .trailing])
             
-            VStack (spacing: 10){
+            VStack (spacing: 17){
                 AppTextField(placeHolder: "Email address", text: $email)
                 AppSecureField(placeHolder: "Password", text: $password)
             }
@@ -83,6 +83,7 @@ struct SignInView: View {
                             self.appUser = appUser
                         } catch {
                             print("error signing in with apple")
+                            UINotificationFeedbackGenerator().notificationOccurred(.error)
                         }
                     }
                 }) {

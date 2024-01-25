@@ -16,11 +16,11 @@ struct WelcomeText: View {
                 .lineSpacing(0.83)
                 .foregroundColor(.white)
                 .fixedSize(horizontal: false, vertical: true)
-            Text("Please login or sign up our app")
+            Text("Please login or sign up for our app")
                 .font(.headline)
                 .fontWeight(.semibold)
                 .lineSpacing(0.77)
-                .foregroundColor(Color(.systemGray5))
+                .foregroundColor(Color("LightGray"))
         }
         .clipped()
         .background(.clear)

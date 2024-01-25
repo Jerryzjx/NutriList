@@ -46,7 +46,7 @@ struct RegistrationView: View {
                     } catch {
                         print("issue with sign in")
                         UINotificationFeedbackGenerator().notificationOccurred(.error)
-                        self.alertMessage = "Invalid email or password."
+                        self.alertMessage = "Invalid email format or password is less than 7 characters."
                         self.showAlert = true
                     }
                 }

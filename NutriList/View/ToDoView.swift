@@ -10,63 +10,66 @@ import SwiftUI
 struct ToDoView: View {
     @StateObject var viewModel = ToDoViewModel()
     @State private var showSignOutAlert = false
+    @State private var showingCreateToDo = false
     @State var appUser: AppUser
     
     var body: some View {
         NavigationStack {
             ZStack {
-                
                 ScrollView(showsIndicators: false) {
                     LazyVStack {
-                        ForEach(viewModel.todos, id: \.text){ todo in
+                        ForEach(viewModel.todos, id: \.text) { todo in
                             ToDoItemView(todo: todo)
                                 .environmentObject(viewModel)
                                 .padding(.horizontal)
                         }
                     }
                 }
-            }
-            .background(Color(red: 39/255, green: 40/255, blue: 39/255))
-            .navigationTitle("Grocery List")
-            .toolbar {
                 
-                HStack {
-                    Button {
-                        showSignOutAlert = true
-                    } label: {
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                            .resizable()
-                            .frame(width: 32, height: 32)
-                            .padding(.all, 2)
-                            .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
-                    }.alert(isPresented: $showSignOutAlert) {
-                        Alert(title: Text("Sign Out"), message: Text("Are you sure you want to sign out?"), primaryButton: .destructive(Text("Sign Out")) {
-                            Task{
-                                do {
-                                    try await AuthManager.shared.signOut()
-                                    appUser = .init(uid: "", email: "")
-                                    
-                                } catch {
-                                    print("unable to sign out")
-                                }
+                // Floating Action Button at the bottom
+                VStack {
+                    Spacer()
+                    HStack {
+                        Button(action: {
+                            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                            showingCreateToDo.toggle() // Toggle the state to show CreateToDoView
+                        }) {
+                            HStack(spacing: 12) {
+                                Image(systemName: "plus.circle.fill")
+                                    .resizable()
+                                    .frame(width: 30, height: 30)
+                                Text("Add a Grocery Item")
+                                    .fontWeight(.medium)
                             }
-                        }, secondaryButton: .cancel())
+                            .padding()
+                            .foregroundColor(.white)
+                            
+                            .cornerRadius(40)
+                        }
+                        .accessibilityIdentifier("Add")
+                        .padding(.leading, 20)
+                        .padding(.bottom, 20)
+                        
+                        Spacer()
                     }
-                    NavigationLink {
-                        CreateToDoView(appUser: appUser)
-                            .environmentObject(viewModel)
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .frame(width: 32, height: 32)
-                            .padding(.all, 2)
-                            .foregroundColor(Color(red: 62/255, green: 207/255, blue: 142/255))
-                            .accessibilityIdentifier("Add")
                 }
-                }
-                
+                .sheet(isPresented: $showingCreateToDo) {
+                                    // Present the CreateToDoView
+                                    CreateToDoView(appUser: appUser)
+                                        .environmentObject(viewModel)
+                                        .presentationDetents([.fraction(0.33)])
+                                        .edgesIgnoringSafeArea([.bottom, .horizontal])
+                                        .transition(.move(edge: .bottom))
+                                }
             }
-            .onAppear{
+            .background(Color("DarkTeal"))
+            .navigationTitle("NutriList")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    settingsButton
+                }
+            }
+            .onAppear {
                 Task {
                     do {
                         try await viewModel.fetchItems(for: appUser.uid)
@@ -77,8 +80,38 @@ struct ToDoView: View {
             }
         }
     }
+    
+    private var settingsButton: some View {
+        Button {
+            showSignOutAlert = true
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        } label: {
+            Image(systemName: "gear")
+                .font(.system(size: 23, weight: .medium))
+                .frame(width: 44, height: 44)
+                .padding(.all, 2)
+                .foregroundColor(.white)
+        }
+        .alert(isPresented: $showSignOutAlert) {
+            Alert(title: Text("Sign Out"), message: Text("Are you sure you want to sign out?"), primaryButton: .destructive(Text("Sign Out")) {
+                Task {
+                    do {
+                        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+                        try await AuthManager.shared.signOut()
+                        appUser = .init(uid: "", email: "")
+                    } catch {
+                        UINotificationFeedbackGenerator().notificationOccurred(.error)
+                        print("unable to sign out")
+                    }
+                }
+            }, secondaryButton: .cancel())
+        }
+    }
 }
 
-#Preview {
-    ToDoView(appUser: .init(uid: "", email: ""))
+// Preview
+struct ToDoView_Previews: PreviewProvider {
+    static var previews: some View {
+        ToDoView(appUser: .init(uid: "", email: ""))
+    }
 }

@@ -17,18 +17,30 @@ import SwiftUI
 struct AppTextField: View {
     var placeHolder: String
     @Binding var text: String
-
+    
     var body: some View {
-        TextField(placeHolder, text: $text)
-            .padding()
-            .background {
-                RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color(uiColor: .secondaryLabel), lineWidth: 1)
-            }
-            .accessibilityIdentifier(placeHolder)
-            .keyboardType(.emailAddress)
-            .textInputAutocapitalization(.never)
-            .autocorrectionDisabled()
+        HStack (spacing: 5) {
+            Image(systemName: "envelope")
+                .foregroundColor(Color.white)
+                .font(.system(size: 18, weight: .regular))
+                .frame(width: 44, height: 44)
+            
+                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+            TextField("", text: $text, prompt: Text(placeHolder)
+                .foregroundColor(Color("PlaceHolderGray"))
+                .font(.system(size: 17, weight: .regular)))
+                .padding()
+                .accessibilityIdentifier(placeHolder)
+                .keyboardType(.emailAddress)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+        }
+        .padding(1)
+        .background {
+            RoundedRectangle(cornerRadius: 20)
+                .fill(Color("LightTeal").opacity(0.65))
+                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+        }
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40D1B922B62F73E009B2576 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D1B912B62F73E009B2576 /* ShakeEffect.swift */; };
 		C412E8D02B50403100CB7764 /* MockDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */; };
 		C412E8D22B5040EA00CB7764 /* ToDoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */; };
 		C412E8D42B504A7600CB7764 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D32B504A7600CB7764 /* Mockable.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40D1B912B62F73E009B2576 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
 		C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseManager.swift; sourceTree = "<group>"; };
 		C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModelTests.swift; sourceTree = "<group>"; };
 		C412E8D32B504A7600CB7764 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				C4B945BA2B4F27C800EDD42F /* AppTextFieldV2.swift */,
 				C4B945BC2B4F290700EDD42F /* AppSecureFieldV2.swift */,
 				C4B945BE2B4F2AC000EDD42F /* WelcomeText.swift */,
+				C40D1B912B62F73E009B2576 /* ShakeEffect.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				C42C74552B4B0FA2004E0A2C /* SignInView.swift in Sources */,
 				C42C740C2B4B077C004E0A2C /* ContentView.swift in Sources */,
 				C42C74512B4B0F3E004E0A2C /* AuthManager.swift in Sources */,
+				C40D1B922B62F73E009B2576 /* ShakeEffect.swift in Sources */,
 				C4A9CEF22B4C915B00047CDC /* AppButton.swift in Sources */,
 				C42C740A2B4B077C004E0A2C /* NutriListApp.swift in Sources */,
 				C4B945BD2B4F290700EDD42F /* AppSecureFieldV2.swift in Sources */,

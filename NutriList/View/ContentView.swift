@@ -15,11 +15,17 @@ struct ContentView: View {
             if authManager.isAuthenticated {
                 if let appUser = appUser {
                     ToDoView(appUser: appUser)
+                        .transition(.move(edge: .bottom))
+                        .animation(.easeInOut(duration: 0.45))
                 } else {
                     SignInView(appUser: $appUser)
+                        .transition(.move(edge: .bottom))
+                        .animation(.easeInOut(duration: 0.45))
                 }
             } else {
                 SignInView(appUser: $appUser)
+                    .transition(.move(edge: .bottom))
+                    .animation(.easeInOut(duration: 0.45))
             }
             
         }
@@ -28,7 +34,6 @@ struct ContentView: View {
                 self.appUser = try await AuthManager.shared.getCurrentSession()
             }
         }
-        
        
     }
 }

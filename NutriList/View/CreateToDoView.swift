@@ -35,13 +35,14 @@ struct CreateToDoView: View {
     
     var body: some View {
         VStack (spacing: 30) {
-            Text("Create A ToDo")
-                .font(.largeTitle)
+            Text("Add a grocery item")
+                .font(.title)
             
-            AppTextField(placeHolder: "Please enter your task", text: $text)
+            AppTextFieldV2(placeHolder: "Please enter your item", text: $text)
             
             Button {
                 if text.count > 2 {
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     classifyText(text)
                     /* fetchPrediction(input: text) { result in
                      DispatchQueue.main.async {
@@ -61,24 +62,46 @@ struct CreateToDoView: View {
                      }
                      }
                      }*/
+                } else {
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
                 }
             } label: {
                 Text("Create")
+                    .font(Font.system(size: 23))
+                    .fontWeight(.semibold)
                     .padding()
-                    .foregroundColor(Color(uiColor: .systemBackground))
+                    .foregroundColor(Color(uiColor: .white))
                     .frame(maxWidth:.infinity)
                     .frame(height: 55)
                     .background {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous).foregroundColor(Color(uiColor: .label))
+                        RoundedRectangle(cornerRadius: 20, style: .continuous).foregroundColor(Color("LightTeal"))
                     }
             }
             .padding(.horizontal, 24)
         }
         .alert(isPresented: $showAlert) {
+            
             Alert(title: Text("Duplicate Item"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .padding(.all)
+            .padding()
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(.ultraThinMaterial)
+                    )
+                    .edgesIgnoringSafeArea([.bottom, .horizontal])
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .onDisappear{
+                
+                    Task {
+                        do {
+                            try await viewModel.fetchItems(for: appUser.uid)
+                        } catch {
+                            print(error)
+                        }
+                    }
+                
+            }
+            
     }
     
     private func classifyText(_ inputText: String) {
@@ -94,6 +117,7 @@ struct CreateToDoView: View {
     
     private func predictCategory(for inputText: String) -> String {
         guard let textClassifier = textClassifier else {
+            UINotificationFeedbackGenerator().notificationOccurred(.error)
             return "Model not loaded"
         }
         
@@ -101,6 +125,7 @@ struct CreateToDoView: View {
             let prediction = try textClassifier.prediction(text: inputText)
             return prediction.label
         } catch {
+            UINotificationFeedbackGenerator().notificationOccurred(.error)
             print("Error during prediction: \(error)")
             return "Prediction failed"
         }
@@ -113,9 +138,11 @@ struct CreateToDoView: View {
             do {
                 try await viewModel.createItem(text: text, uid: appUser.uid, category: predictionResult)
                 dismiss()
+                
             } catch let error as NSError {
                 // Check if the error is the specific duplicate item error
                 if error.domain == "ToDoViewModel" && error.code == 1001 {
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
                     alertMessage = error.localizedDescription
                     showAlert = true
                 } else {
