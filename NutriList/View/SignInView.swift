@@ -19,46 +19,56 @@ struct SignInView: View {
     @Binding var appUser: AppUser?
     var body: some View {
         VStack (spacing: 30) {
+            Spacer()
+            Spacer()
+            Spacer()
+            AppIcon()
+            
+            
+            WelcomeText()
+                .frame(width: UIScreen.main.bounds.width * 0.85, alignment: .topLeading)
+                .padding([.leading, .trailing]) // You might adjust this padding as needed
+            
+            
             VStack (spacing: 10){
                 AppTextField(placeHolder: "Email address", text: $email)
                 AppSecureField(placeHolder: "Password", text: $password)
             }
             .padding(.horizontal, 24)
             
-            Button("New User? Register Here") {
-                isRegisterationPresented.toggle()
-            }
-            .foregroundColor(Color(uiColor: .label))
-            .sheet(isPresented: $isRegisterationPresented, content: {
-                RegistrationView(appUser: $appUser)
-                    .environmentObject(viewModel)
-            })
+            
             
             Button {
+                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 Task {
                     do {
-                       let appUser = try await viewModel.signInWithEmail(email: email, password: password)
+                        let appUser = try await viewModel.signInWithEmail(email: email, password: password)
                         self.appUser = appUser
                     } catch {
                         self.alertMessage = "Issue with sign in. Please check your email and password."
                         self.showAlert = true
                         print("issue with sign in")
+                        // failure haptic effect
+                        UINotificationFeedbackGenerator().notificationOccurred(.error)
                     }
                 }
             } label: {
-                Text("Sign In")
+                Text("Sign in")
+                    .font(Font.system(size: 21))
+                    .fontWeight(.semibold)
                     .padding()
-                    .foregroundColor(Color(uiColor: .systemBackground))
+                    .foregroundColor(Color(uiColor: .white))
                     .frame(maxWidth:.infinity)
                     .frame(height: 55)
-                    .background {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous).foregroundColor(Color(uiColor: .label))
-                    }
+            }
+            .background {
+                RoundedRectangle(cornerRadius: 15, style: .continuous).foregroundColor(Color(uiColor: .systemTeal))
             }
             .padding(.horizontal, 24)
             
-            VStack {
+            VStack (spacing: 20){
                 Button {
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     Task {
                         do {
                             let appUser = try await viewModel.signInWithApple()
@@ -69,28 +79,43 @@ struct SignInView: View {
                     }
                 } label: {
                     Text("Sign in with Apple")
+                        .font(Font.system(size: 18))
+                        .fontWeight(.semibold)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .foregroundColor(Color(uiColor: .label))
-                        .overlay{
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(Color(uiColor: .label), lineWidth: 1)
-                        }
+                        .foregroundColor(Color(uiColor: .white))
+                }
+                .background {
+                    RoundedRectangle(cornerRadius: 15, style: .continuous).foregroundColor(Color(uiColor: .black))
                 }
                 
+                Button("Don't have an account? Sign Up") {
+                    isRegisterationPresented.toggle()
+                }
+                .font(Font.system(size: 18))
+                .foregroundColor(Color(uiColor: .white))
+                .sheet(isPresented: $isRegisterationPresented) {
+                    RegistrationView(appUser: $appUser)
+                        .environmentObject(viewModel)
+                }
+                Spacer()
+                Spacer()
             }
-            .padding(.top)
-            .padding(.horizontal, 24)
-            .alert(isPresented: $showAlert) { // Alert modifier
-                        Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-                    }
+                .padding(.top)
+                .padding(.horizontal, 24)
+                
+                .alert(isPresented: $showAlert) { // Alert modifier
+                    Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                }
+            }
+            .padding(10)
+            .background(Color("DarkTeal"))
+            
         }
-        
     }
-}
-
-struct SignInView_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInView(appUser: .constant(.init(uid: "1234", email: nil)))
+    
+    struct SignInView_Previews: PreviewProvider {
+        static var previews: some View {
+            SignInView(appUser: .constant(.init(uid: "1234", email: nil)))
+        }
     }
-}
