@@ -34,6 +34,8 @@
 
 **Available for iOS, currently in Beta Test.**
 
+If you are interested in testing the app, please feel free to email me: [![Email Jerry](https://img.shields.io/badge/Email-jerryz.zjx@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jerryz.zjx@gmail.com)
+
 ## Features:
 - User Authentication with Supabase using Email or Apple Sign In
 - Create grocery items with classification powered by Cohere API
