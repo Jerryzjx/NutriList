@@ -43,7 +43,7 @@ struct ToDoView: View {
                             }
                             .padding()
                             .foregroundColor(.white)
-                            
+                            .background(Color("LightTeal").opacity(0.85))
                             .cornerRadius(40)
                         }
                         .accessibilityIdentifier("Add")
