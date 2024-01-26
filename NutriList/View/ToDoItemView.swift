@@ -11,6 +11,7 @@ struct ToDoItemView: View {
     @EnvironmentObject var viewModel: ToDoViewModel
     @State var todo: ToDo
     @State private var isSelected: Bool = false
+    @State var appUser: AppUser
 
     var body: some View {
         HStack {
@@ -26,6 +27,8 @@ struct ToDoItemView: View {
                     Task {
                         do {
                             try await viewModel.deleteItem(todo: todo)
+                            // wait for a second before deleting the item
+                            try await Task.sleep(nanoseconds: 1_000_000_000)
                             isSelected = false // Set isSelected to true only if deletion is successful
                         } catch {
                             print("Error deleting item: \(error)")
@@ -66,14 +69,26 @@ struct ToDoItemView: View {
             in: RoundedRectangle(cornerRadius: 15)
         )
         .padding([.leading, .trailing], 10)
+        .onDisappear{
+            
+                Task {
+                    do {
+                        try await viewModel.fetchItems(for: appUser.uid)
+                    } catch {
+                        print(error)
+                    }
+                }
+            
+        }
 
     }
+    
 }
 
 // Preview
 struct ToDoItemView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoItemView(todo: .init(id: 0, createdAt: "", text: "Apple", userUid: "", category: "Fruit"))
+        ToDoItemView(todo: .init(id: 0, createdAt: "", text: "Apple", userUid: "", category: "Fruit"), appUser: AppUser(uid: "", email: ""))
             .environmentObject(ToDoViewModel())
     }
 }

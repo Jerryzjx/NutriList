@@ -18,8 +18,8 @@ struct ToDoView: View {
             ZStack {
                 ScrollView(showsIndicators: false) {
                     LazyVStack {
-                        ForEach(viewModel.todos, id: \.text) { todo in
-                            ToDoItemView(todo: todo)
+                        ForEach(viewModel.todos) { todo in
+                            ToDoItemView(todo: todo, appUser: appUser)
                                 .environmentObject(viewModel)
                                 .padding(.horizontal)
                         }
