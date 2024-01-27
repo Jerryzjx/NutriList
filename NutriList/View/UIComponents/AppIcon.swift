@@ -10,7 +10,7 @@ import SwiftUI
 struct AppIcon: View {
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            Image("NutriListIcon") // Replace 'AppIconImage' with the name of your duplicate icon asset
+            Image("NutriListIcon") 
                 .resizable()
                 .scaledToFit()
                 .frame(width: 100, height: 100)
