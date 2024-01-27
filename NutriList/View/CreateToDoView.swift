@@ -38,7 +38,7 @@ struct CreateToDoView: View {
             Text("Add a grocery item")
                 .font(.title)
             
-            AppTextFieldV2(placeHolder: "Please enter your item", text: $text)
+            AppTextFieldV2(placeHolder: "Enter an item", text: $text)
             
             Button {
                 if text.count > 2 {
