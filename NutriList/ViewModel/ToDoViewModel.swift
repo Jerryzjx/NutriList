@@ -15,7 +15,7 @@ extension NSError {
 
 class ToDoViewModel: ObservableObject {
     private let databaseService: DatabaseService
-    
+    @Published var needsRefresh = false
     init(databaseService: DatabaseService = DatabaseManager.shared) {
         self.databaseService = databaseService
     }
@@ -33,6 +33,7 @@ class ToDoViewModel: ObservableObject {
         let toDo = ToDoPayload(text: text, userUid: uid, category: category)
         //print("Creating todo item")
         try await databaseService.createToDoItem(item: toDo)
+        self.needsRefresh = true
     }
     
     // MARK: Read
@@ -46,5 +47,8 @@ class ToDoViewModel: ObservableObject {
     func deleteItem(todo: ToDo) async throws {
         try await databaseService.deleteToDoItem(id: todo.id)
         todos.removeAll(where: { $0.id == todo.id })
+        // print API response
+        print("Deleted todo item")
+        
     }
 }

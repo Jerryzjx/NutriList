@@ -12,7 +12,8 @@ struct ToDoItemView: View {
     @State var todo: ToDo
     @State private var isSelected: Bool = false
     @State var appUser: AppUser
-
+    @State var offset: CGFloat = 0
+    
     var body: some View {
         HStack {
             // Toggleable Circle SF Symbol
@@ -69,6 +70,10 @@ struct ToDoItemView: View {
             in: RoundedRectangle(cornerRadius: 15)
         )
         .padding([.leading, .trailing], 10)
+        .gesture(
+                    DragGesture()
+                        .onChanged(onChange(value:))
+                )
         .onDisappear{
             
                 Task {
@@ -82,7 +87,21 @@ struct ToDoItemView: View {
         }
 
     }
-    
+    func onChange(value: DragGesture.Value) {
+        if value.translation.width < 25 {
+            Task {
+                do {
+                    try await viewModel.deleteItem(todo: todo)
+                    // wait for a second before deleting the item
+
+                } catch {
+                    print("Error deleting item: \(error)")
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
+                }
+            }
+        }
+    }
+
 }
 
 // Preview
