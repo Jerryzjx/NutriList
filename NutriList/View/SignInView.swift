@@ -44,8 +44,8 @@ struct SignInView: View {
             
             Button {
                 withAnimation(.easeInOut(duration: 1)) {
-    
-                                    }
+                    
+                }
                 UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 Task {
                     do {
@@ -83,6 +83,7 @@ struct SignInView: View {
                             self.appUser = appUser
                         } catch {
                             print("error signing in with apple")
+                            print(error)
                             UINotificationFeedbackGenerator().notificationOccurred(.error)
                         }
                     }
@@ -111,21 +112,21 @@ struct SignInView: View {
                 Spacer()
                 Spacer()
             }
-                .padding(.top)
-                .padding(.horizontal, 24)
-                
-                .alert(isPresented: $showAlert) { // Alert modifier
-                    Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-                }
-            }
-            .padding(10)
-            .background(Color("DarkTeal"))
+            .padding(.top)
+            .padding(.horizontal, 24)
             
+            .alert(isPresented: $showAlert) { // Alert modifier
+                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            }
         }
+        .padding(10)
+        .background(Color("DarkTeal"))
+        
     }
-    
-    struct SignInView_Previews: PreviewProvider {
-        static var previews: some View {
-            SignInView(appUser: .constant(.init(uid: "1234", email: nil)))
-        }
+}
+
+struct SignInView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInView(appUser: .constant(.init(uid: "1234", email: nil)))
     }
+}

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C40D1B922B62F73E009B2576 /* ShakeEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D1B912B62F73E009B2576 /* ShakeEffect.swift */; };
+		C40DADD72B730B5D00A2EA8D /* SignInAppleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40DADD62B730B5D00A2EA8D /* SignInAppleView.swift */; };
 		C412E8D02B50403100CB7764 /* MockDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */; };
 		C412E8D22B5040EA00CB7764 /* ToDoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */; };
 		C412E8D42B504A7600CB7764 /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412E8D32B504A7600CB7764 /* Mockable.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		C40D1B912B62F73E009B2576 /* ShakeEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeEffect.swift; sourceTree = "<group>"; };
+		C40DADD62B730B5D00A2EA8D /* SignInAppleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleView.swift; sourceTree = "<group>"; };
 		C412E8CF2B50403100CB7764 /* MockDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDatabaseManager.swift; sourceTree = "<group>"; };
 		C412E8D12B5040EA00CB7764 /* ToDoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModelTests.swift; sourceTree = "<group>"; };
 		C412E8D32B504A7600CB7764 /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C42C74612B4B12ED004E0A2C /* ToDoItemView.swift */,
 				C42C74632B4B12FA004E0A2C /* CreateToDoView.swift */,
 				C42C74652B4B133A004E0A2C /* HomeView.swift */,
+				C40DADD62B730B5D00A2EA8D /* SignInAppleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				C4B945BD2B4F290700EDD42F /* AppSecureFieldV2.swift in Sources */,
 				C42C74642B4B12FA004E0A2C /* CreateToDoView.swift in Sources */,
 				C4B945BF2B4F2AC000EDD42F /* WelcomeText.swift in Sources */,
+				C40DADD72B730B5D00A2EA8D /* SignInAppleView.swift in Sources */,
 				C42C74662B4B133A004E0A2C /* HomeView.swift in Sources */,
 				C4B945BB2B4F27C800EDD42F /* AppTextFieldV2.swift in Sources */,
 				C42C745F2B4B12D8004E0A2C /* ToDoView.swift in Sources */,

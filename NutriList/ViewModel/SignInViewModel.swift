@@ -44,6 +44,8 @@ class SignInViewModel: ObservableObject {
     
     func signInWithApple() async throws -> AppUser {
         let appleResult = try await signInApple.startSignInWithAppleFlow()
+        print(appleResult.idToken)
+        print(appleResult.nonce)
         return try await authManager.signInWithApple(idToken: appleResult.idToken, nonce: appleResult.nonce)
     }
 }
