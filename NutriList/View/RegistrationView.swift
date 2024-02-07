@@ -41,8 +41,8 @@ struct RegistrationView: View {
                 Task {
                     do {
                         let user = try await viewModel.registerNewUserWithEmail(email: email, password: password)
-                        self.appUser = appUser
-                        dismiss.callAsFunction()
+                                                self.appUser = appUser
+                                                dismiss.callAsFunction()
                     } catch {
                         print("issue with sign in")
                         UINotificationFeedbackGenerator().notificationOccurred(.error)
